@@ -1,0 +1,27 @@
+{
+  "name": "playwright-libercus",
+  "version": "1.0.0",
+  "description": "Playwright/TypeScript migration of the LibercusProject Selenium/Cucumber suite (Libercus CMS + PF3)",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:cms": "playwright test --project=cms",
+    "test:pf3": "playwright test --project=pf3",
+    "test:regression": "playwright test --grep @regression",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "list": "playwright test --list"
+  },
+  "keywords": ["playwright", "libercus", "cms", "pf3", "migration"],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "yaml": "^2.6.0"
+  }
+}
