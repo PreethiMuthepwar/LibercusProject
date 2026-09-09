@@ -1,0 +1,192 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 3 tests using 1 worker
+
+  ✘  1 [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page (1.7m)
+  ✘  2 [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page (retry #1) (1.7m)
+  ✓  3 [pf3] › tests/pf3/reader.spec.ts:62:3 › @pf3 @reader PF3 reader › Display mode can switch to Single Page (7.0s)
+  ✘  4 [pf3] › tests/pf3/settings.spec.ts:27:3 › @pf3 @settings PF3 settings › Display option can be set to Double Page (1.7m)
+  ✘  5 [pf3] › tests/pf3/settings.spec.ts:27:3 › @pf3 @settings PF3 settings › Display option can be set to Double Page (retry #1) (1.7m)
+
+
+  1) [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page 
+
+    Error: double-page should show more than one visible edition page
+
+    double-page should show more than one visible edition page
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m1[39m
+    Received:   [31m1[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/pf3/pf3-home.page.ts:574
+
+      572 |           message: 'double-page should show more than one visible edition page',
+      573 |         })
+    > 574 |         .toBeGreaterThan(1);
+          |          ^
+      575 |     } else {
+      576 |       await expect
+      577 |         .poll(() => this.visibleEditionPageCount(), {
+        at Pf3HomePage.expectDisplayOption (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:574:10)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/reader.spec.ts:59:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: double-page should show more than one visible edition page
+
+    double-page should show more than one visible edition page
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m1[39m
+    Received:   [31m1[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/pf3/pf3-home.page.ts:574
+
+      572 |           message: 'double-page should show more than one visible edition page',
+      573 |         })
+    > 574 |         .toBeGreaterThan(1);
+          |          ^
+      575 |     } else {
+      576 |       await expect
+      577 |         .poll(() => this.visibleEditionPageCount(), {
+        at Pf3HomePage.expectDisplayOption (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:574:10)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/reader.spec.ts:59:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [pf3] › tests/pf3/settings.spec.ts:27:3 › @pf3 @settings PF3 settings › Display option can be set to Double Page 
+
+    Error: double-page should show more than one visible edition page
+
+    double-page should show more than one visible edition page
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m1[39m
+    Received:   [31m1[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/pf3/pf3-home.page.ts:574
+
+      572 |           message: 'double-page should show more than one visible edition page',
+      573 |         })
+    > 574 |         .toBeGreaterThan(1);
+          |          ^
+      575 |     } else {
+      576 |       await expect
+      577 |         .poll(() => this.visibleEditionPageCount(), {
+        at Pf3HomePage.expectDisplayOption (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:574:10)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/settings.spec.ts:33:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: double-page should show more than one visible edition page
+
+    double-page should show more than one visible edition page
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m1[39m
+    Received:   [31m1[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/pf3/pf3-home.page.ts:574
+
+      572 |           message: 'double-page should show more than one visible edition page',
+      573 |         })
+    > 574 |         .toBeGreaterThan(1);
+          |          ^
+      575 |     } else {
+      576 |       await expect
+      577 |         .poll(() => this.visibleEditionPageCount(), {
+        at Pf3HomePage.expectDisplayOption (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:574:10)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/settings.spec.ts:33:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/settings--pf3-settings-PF3-9ac76-n-can-be-set-to-Double-Page-pf3-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page 
+    [pf3] › tests/pf3/settings.spec.ts:27:3 › @pf3 @settings PF3 settings › Display option can be set to Double Page 
+  1 passed (7.0m)

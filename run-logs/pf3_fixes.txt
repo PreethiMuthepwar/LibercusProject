@@ -1,0 +1,191 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 6 tests using 2 workers
+
+  ✓  1 [pf3] › tests/pf3/links.spec.ts:15:3 › @pf3 @links PF3 links & article navigation › Page-body hyperlinks redirect to the referenced page (3.4s)
+  ✓  3 [pf3] › tests/pf3/links.spec.ts:19:3 › @pf3 @links PF3 links & article navigation › Jump links navigate to the referenced section/page (3.7s)
+  ✓  2 [pf3] › tests/pf3/views.spec.ts:16:3 › @pf3 @views PF3 views › Pages view: select section A and open page A2 (1.8m)
+  ✓  4 [pf3] › tests/pf3/views.spec.ts:26:3 › @pf3 @views PF3 views › Editions view: open an available edition by date (6.7s)
+  ✘  5 [pf3] › tests/pf3/views.spec.ts:44:3 › @pf3 @views PF3 views › Search: Previous Edition with a keyword (1.7m)
+  ✘  6 [pf3] › tests/pf3/views.spec.ts:44:3 › @pf3 @views PF3 views › Search: Previous Edition with a keyword (retry #1) (1.6m)
+  ✘  7 [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab (1.6m)
+  ✘  8 [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab (retry #1) (1.6m)
+
+
+  1) [pf3] › tests/pf3/views.spec.ts:44:3 › @pf3 @views PF3 views › Search: Previous Edition with a keyword 
+
+    TimeoutError: locator.fill: Timeout 90000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[id*=\'mat-input-\']').first()[22m
+    [2m    - locator resolved to <input matinput="" required="" readonly="true" min="2026-05-17" max="2026-06-16" id="mat-input-1" aria-invalid="false" aria-required="true" ng-reflect-required="" ng-reflect-readonly="" aria-haspopup="dialog" ng-reflect-form="[object Object]" data-mat-calendar="mat-datepicker-0" ng-reflect-mat-datepicker="[object Object]" ng-reflect-min="Sun May 17 2026 08:36:33 GMT+0" ng-reflect-max="Tue Jun 16 2026 08:36:33 GMT+0" ng-reflect-model="Sun May 17 2026 08:36:33 GMT+0" class="mat-datepicker-input mat-inp…/>[22m
+    [2m    - fill("Test")[22m
+    [2m  - attempting fill action[22m
+    [2m    2 × waiting for element to be visible, enabled and editable[22m
+    [2m      - element is not editable[22m
+    [2m    - retrying fill action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and editable[22m
+    [2m      - element is not editable[22m
+    [2m    - retrying fill action[22m
+    [2m      - waiting 100ms[22m
+    [2m    167 × waiting for element to be visible, enabled and editable[22m
+    [2m        - element is not editable[22m
+    [2m      - retrying fill action[22m
+    [2m        - waiting 500ms[22m
+
+
+       at ../pages/pf3/pf3-home.page.ts:465
+
+      463 |   /** Selenium iEnterInSearchField: type a term into the search field. */
+      464 |   async enterSearch(term: string): Promise<void> {
+    > 465 |     await this.searchField.first().fill(term);
+          |                                    ^
+      466 |   }
+      467 |
+      468 |   // ── Settings panel (menu layout / theme colour / display option) ──
+        at Pf3HomePage.enterSearch (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:465:36)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/views.spec.ts:53:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: locator.fill: Timeout 90000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('input[id*=\'mat-input-\']').first()[22m
+    [2m    - locator resolved to <input matinput="" required="" readonly="true" min="2026-05-17" max="2026-06-16" id="mat-input-1" aria-invalid="false" aria-required="true" ng-reflect-required="" ng-reflect-readonly="" aria-haspopup="dialog" ng-reflect-form="[object Object]" data-mat-calendar="mat-datepicker-0" ng-reflect-mat-datepicker="[object Object]" ng-reflect-min="Sun May 17 2026 08:38:11 GMT+0" ng-reflect-max="Tue Jun 16 2026 08:38:11 GMT+0" ng-reflect-model="Sun May 17 2026 08:38:11 GMT+0" class="mat-datepicker-input mat-inp…/>[22m
+    [2m    - fill("Test")[22m
+    [2m  - attempting fill action[22m
+    [2m    2 × waiting for element to be visible, enabled and editable[22m
+    [2m      - element is not editable[22m
+    [2m    - retrying fill action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and editable[22m
+    [2m      - element is not editable[22m
+    [2m    - retrying fill action[22m
+    [2m      - waiting 100ms[22m
+    [2m    168 × waiting for element to be visible, enabled and editable[22m
+    [2m        - element is not editable[22m
+    [2m      - retrying fill action[22m
+    [2m        - waiting 500ms[22m
+
+
+       at ../pages/pf3/pf3-home.page.ts:465
+
+      463 |   /** Selenium iEnterInSearchField: type a term into the search field. */
+      464 |   async enterSearch(term: string): Promise<void> {
+    > 465 |     await this.searchField.first().fill(term);
+          |                                    ^
+      466 |   }
+      467 |
+      468 |   // ── Settings panel (menu layout / theme colour / display option) ──
+        at Pf3HomePage.enterSearch (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:465:36)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/views.spec.ts:53:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/views--pf3-views-PF3-views-f7ad2-ious-Edition-with-a-keyword-pf3-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab 
+
+    TimeoutError: browserContext.waitForEvent: Timeout 90000ms exceeded while waiting for event "page"
+
+       at ../pages/pf3/pf3-home.page.ts:452
+
+      450 |     await this.adImages.last().scrollIntoViewIfNeeded().catch(() => {});
+      451 |     const [popup] = await Promise.all([
+    > 452 |       this.page.context().waitForEvent('page', { timeout: this.defaultWaitMs }),
+          |                           ^
+      453 |       this.adImages.last().click({ force: true }),
+      454 |     ]);
+      455 |     return popup;
+        at Pf3HomePage.clickAdImageExpectNewTab (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:452:27)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/views.spec.ts:58:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TimeoutError: browserContext.waitForEvent: Timeout 90000ms exceeded while waiting for event "page"
+
+       at ../pages/pf3/pf3-home.page.ts:452
+
+      450 |     await this.adImages.last().scrollIntoViewIfNeeded().catch(() => {});
+      451 |     const [popup] = await Promise.all([
+    > 452 |       this.page.context().waitForEvent('page', { timeout: this.defaultWaitMs }),
+          |                           ^
+      453 |       this.adImages.last().click({ force: true }),
+      454 |     ]);
+      455 |     return popup;
+        at Pf3HomePage.clickAdImageExpectNewTab (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:452:27)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/views.spec.ts:58:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [pf3] › tests/pf3/views.spec.ts:44:3 › @pf3 @views PF3 views › Search: Previous Edition with a keyword 
+    [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab 
+  4 passed (9.0m)

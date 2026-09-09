@@ -1,0 +1,464 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 9 tests using 3 workers
+
+  ✘  3 [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (7.1s)
+  ✓  1 [regression] › tests/regression/congero-administration.spec.ts:15:3 › @regression @CMS @Congero Congero Administration › Create a Lookup Data entry (9.5s)
+  ✘  4 [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (retry #1) (6.0s)
+  ✘  5 [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style (13.3s)
+  ✘  6 [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style (retry #1) (9.7s)
+  ✘  7 [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style (10.8s)
+  ✘  8 [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style (retry #1) (12.3s)
+  ✘  9 [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template (8.0s)
+  ✘  10 [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template (retry #1) (12.0s)
+  ✘  11 [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template (14.5s)
+  ✘  2 [regression] › tests/regression/product-administration.spec.ts:27:3 › @regression @CMS @ProductAdmin Product Administration › Create a new tag (1.7m)
+  ✘  12 [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template (retry #1) (20.8s)
+  ✘  13 [regression] › tests/regression/product-administration.spec.ts:27:3 › @regression @CMS @ProductAdmin Product Administration › Create a new tag (retry #1) (1.8m)
+  ✓  14 [regression] › tests/regression/print-administration.spec.ts:131:3 › @regression @CMS @PrintAdmin Print Administration › Create an image style (1.6m)
+  ✓  15 [regression] › tests/regression/print-administration.spec.ts:141:3 › @regression @CMS @PrintAdmin Print Administration › Create a jump style (18.8s)
+
+
+  1) [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape 
+
+    Error: No selectable rows in #printshapes-main
+
+       at ../pages/cms/print-admin.page.ts:116
+
+      114 |     const boxes = this.rowCheckboxes(mainId);
+      115 |     const count = await boxes.count();
+    > 116 |     if (count < 1) throw new Error(`No selectable rows in #${mainId}`);
+          |                          ^
+      117 |     // Selenium: jsClick(listOf*.get(getRandomIntBetween(0, size-1))).
+      118 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      119 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:116:26)
+        at PrintAdminPage.deleteShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:186:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No selectable rows in #printshapes-main
+
+       at ../pages/cms/print-admin.page.ts:116
+
+      114 |     const boxes = this.rowCheckboxes(mainId);
+      115 |     const count = await boxes.count();
+    > 116 |     if (count < 1) throw new Error(`No selectable rows in #${mainId}`);
+          |                          ^
+      117 |     // Selenium: jsClick(listOf*.get(getRandomIntBetween(0, size-1))).
+      118 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      119 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:116:26)
+        at PrintAdminPage.deleteShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:186:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style 
+
+    Error: No selectable rows in #printstyles-main
+
+       at ../pages/cms/print-admin.page.ts:116
+
+      114 |     const boxes = this.rowCheckboxes(mainId);
+      115 |     const count = await boxes.count();
+    > 116 |     if (count < 1) throw new Error(`No selectable rows in #${mainId}`);
+          |                          ^
+      117 |     // Selenium: jsClick(listOf*.get(getRandomIntBetween(0, size-1))).
+      118 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      119 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:116:26)
+        at PrintAdminPage.copyStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:208:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:87:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No selectable rows in #printstyles-main
+
+       at ../pages/cms/print-admin.page.ts:116
+
+      114 |     const boxes = this.rowCheckboxes(mainId);
+      115 |     const count = await boxes.count();
+    > 116 |     if (count < 1) throw new Error(`No selectable rows in #${mainId}`);
+          |                          ^
+      117 |     // Selenium: jsClick(listOf*.get(getRandomIntBetween(0, size-1))).
+      118 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      119 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:116:26)
+        at PrintAdminPage.copyStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:208:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:87:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style 
+
+    Error: No selectable rows in #printstyles-main
+
+       at ../pages/cms/print-admin.page.ts:116
+
+      114 |     const boxes = this.rowCheckboxes(mainId);
+      115 |     const count = await boxes.count();
+    > 116 |     if (count < 1) throw new Error(`No selectable rows in #${mainId}`);
+          |                          ^
+      117 |     // Selenium: jsClick(listOf*.get(getRandomIntBetween(0, size-1))).
+      118 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      119 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:116:26)
+        at PrintAdminPage.deleteStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:212:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:92:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No selectable rows in #printstyles-main
+
+       at ../pages/cms/print-admin.page.ts:116
+
+      114 |     const boxes = this.rowCheckboxes(mainId);
+      115 |     const count = await boxes.count();
+    > 116 |     if (count < 1) throw new Error(`No selectable rows in #${mainId}`);
+          |                          ^
+      117 |     // Selenium: jsClick(listOf*.get(getRandomIntBetween(0, size-1))).
+      118 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      119 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:116:26)
+        at PrintAdminPage.deleteStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:212:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:92:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template 
+
+    Error: No selectable template rows
+
+       at ../pages/cms/print-admin.page.ts:239
+
+      237 |     const boxes = this.rowCheckboxes('printpagetemplates-main');
+      238 |     const count = await boxes.count();
+    > 239 |     if (count < 1) throw new Error('No selectable template rows');
+          |                          ^
+      240 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      241 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+      242 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+        at PrintAdminPage.selectTemplateAndConfirm (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:239:26)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:122:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No selectable template rows
+
+       at ../pages/cms/print-admin.page.ts:239
+
+      237 |     const boxes = this.rowCheckboxes('printpagetemplates-main');
+      238 |     const count = await boxes.count();
+    > 239 |     if (count < 1) throw new Error('No selectable template rows');
+          |                          ^
+      240 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      241 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+      242 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+        at PrintAdminPage.selectTemplateAndConfirm (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:239:26)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:122:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template 
+
+    Error: No selectable template rows
+
+       at ../pages/cms/print-admin.page.ts:239
+
+      237 |     const boxes = this.rowCheckboxes('printpagetemplates-main');
+      238 |     const count = await boxes.count();
+    > 239 |     if (count < 1) throw new Error('No selectable template rows');
+          |                          ^
+      240 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      241 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+      242 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+        at PrintAdminPage.selectTemplateAndConfirm (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:239:26)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:127:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No selectable template rows
+
+       at ../pages/cms/print-admin.page.ts:239
+
+      237 |     const boxes = this.rowCheckboxes('printpagetemplates-main');
+      238 |     const count = await boxes.count();
+    > 239 |     if (count < 1) throw new Error('No selectable template rows');
+          |                          ^
+      240 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      241 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+      242 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+        at PrintAdminPage.selectTemplateAndConfirm (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:239:26)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:127:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [regression] › tests/regression/product-administration.spec.ts:27:3 › @regression @CMS @ProductAdmin Product Administration › Create a new tag 
+
+    Error: tag count should reach 1
+
+    tag count should reach 1
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m121340[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/product-admin.page.ts:143
+
+      141 |         message: `tag count should reach ${this.beforeTagCount + 1}`,
+      142 |       })
+    > 143 |       .toBe(this.beforeTagCount + 1);
+          |        ^
+      144 |   }
+      145 |
+      146 |   /** Selenium enterTextInSearchBox: type display name then click Update. */
+        at ProductAdminPage.verifyTagCreated (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/product-admin.page.ts:143:8)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/product-administration.spec.ts:34:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: tag count should reach 1
+
+    tag count should reach 1
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1[39m
+    Received: [31m121342[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/product-admin.page.ts:143
+
+      141 |         message: `tag count should reach ${this.beforeTagCount + 1}`,
+      142 |       })
+    > 143 |       .toBe(this.beforeTagCount + 1);
+          |        ^
+      144 |   }
+      145 |
+      146 |   /** Selenium enterTextInSearchBox: type display name then click Update. */
+        at ProductAdminPage.verifyTagCreated (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/product-admin.page.ts:143:8)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/product-administration.spec.ts:34:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/product-administration--re-da53c-nistration-Create-a-new-tag-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape 
+    [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style 
+    [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style 
+    [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template 
+    [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template 
+    [regression] › tests/regression/product-administration.spec.ts:27:3 › @regression @CMS @ProductAdmin Product Administration › Create a new tag 
+  3 passed (4.1m)

@@ -1,0 +1,21 @@
+fromDate: "13/01/2025"
+toDate: "27/05/2025"
+pageDeleteDate: "30/01/2025"
+fromDate2: "31/01/2025"
+todate2: "21/04/2025"
+
+fromDateForCopyOfStories: "04/06/2025"
+toDateForCopyOfStories: "05/06/2025"
+
+
+fromDateForInteractiveAds: "13/01/2025"
+toDateForInteractiveAds: "28/05/2025"
+
+
+fromDateForRichMediaAds: "14/01/2025"
+toDateForRichMediaAds: "28/05/2025"
+
+fromDateForPages: "14/01/2025"
+toDateForPages: "13/05/2025"
+
+dateForStoryDelete: "13/01/2025"

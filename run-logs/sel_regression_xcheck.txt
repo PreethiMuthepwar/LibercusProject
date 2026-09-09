@@ -1,0 +1,294 @@
+### WIREFEEDS ###
+
+@CMS, @Regression
+Scenario: This scenario verifies that a wire story can be used and published in the CMS. # test/automation/features/SmokeTesting/RegressionTesting/CMS/WireFeeds.feature:3
+Jun 15, 2026 9:55:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 149
+Jun 15, 2026 9:55:48 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 149.0.7827.103. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given I visit "CMS Login" page                                                         # test.automation.framework.Steps.iVisitPage(java.lang.String)
+  When I log in to the Libercus application with valid user credentials                  # test.automation.steps.Libercus.LibercusSteps.iLogInToTheLibercusApplicationWithValidUserCredentials()
+  Then I should be on "CMS HomePage" page                                                # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  Then I should see The Home text                                                        # test.automation.steps.Libercus.LibercusSteps.iShouldSeeTheHomeText()
+  When I navigate to "Wire Stories" from "Feeds" on "CMS HomePage"                       # test.automation.steps.Libercus.LibercusSteps.iNavigateToFromOn(java.lang.String,java.lang.String,java.lang.String)
+  Then I should be on "CMS WireStories" page                                             # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  And I select "Last Month" text in "TransmittedDateRange" dropdown                      # test.automation.framework.Steps.iSelectTextInDropdown(java.lang.String,java.lang.String)
+  And I should check whether the stories are available.                                  # test.automation.steps.Libercus.RegressionSteps.iShouldCheckWhetherTheStoriesAreAvailable()
+  And I select a story                                                                   # test.automation.steps.Libercus.RegressionSteps.iSelectAStory()
+      java.lang.IllegalArgumentException: bound must be positive
+	at java.base/java.util.Random.nextInt(Random.java:551)
+	at test.automation.framework.Random.getRandomIntBetween(Random.java:6)
+	at test.automation.framework.Random.getRandomIndex(Random.java:10)
+	at test.automation.pages.Libercus.CMS.WireStories.selectStory(WireStories.java:70)
+	at test.automation.steps.Libercus.RegressionSteps.iSelectAStory(RegressionSteps.java:43)
+	at ✽.I select a story(classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/WireFeeds.feature:12)
+
+  When I click on "Use" element                                                          # test.automation.framework.Steps.iClickOnElement(java.lang.String)
+  When I enter the publish date for story                                                # test.automation.steps.Libercus.RegressionSteps.iEnterThePublishDateForStory()
+  And I select the customer-specific channel in "channelDropdown" dropdown               # test.automation.framework.Steps.iSelectTheCustomerSpecificChannelInDropdown(java.lang.String)
+  And I select the checkbox for Omit photos                                              # test.automation.steps.Libercus.RegressionSteps.iSelectTheCheckboxForOmitPhotos()
+  Then I tap on the use button                                                           # test.automation.steps.Libercus.RegressionSteps.iTapOnTheUseButton()
+  When I navigate to "Stories" from "Content" on "CMS HomePage"                          # test.automation.steps.Libercus.LibercusSteps.iNavigateToFromOn(java.lang.String,java.lang.String,java.lang.String)
+  Then I should be on "CMS StoryCreation" page                                           # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  And I select "PG Print" text in "channelDropdown" dropdown                             # test.automation.framework.Steps.iSelectTextInDropdown(java.lang.String,java.lang.String)
+  And I select a date for "Stories"                                                      # test.automation.steps.Libercus.RegressionSteps.iSelectADateFor(java.lang.String)
+  And I select "Freetext Search" text in "selectSearchType" dropdown                     # test.automation.framework.Steps.iSelectTextInDropdown(java.lang.String,java.lang.String)
+  And I enter  slug in the search box                                                    # test.automation.steps.Libercus.RegressionSteps.iEnterSlugInTheSearchBox()
+  Then Verify the search results are displayed                                           # test.automation.steps.Libercus.LibercusSteps.verifyTheSearchResultsAreDisplayed()
+
+    Embedding  [image/png 175433 bytes]
+
+
+@CMS, @Regression
+Scenario: This scenario validates that a wire photo can be used and published in the CMS.     # test/automation/features/SmokeTesting/RegressionTesting/CMS/WireFeeds.feature:28
+Jun 15, 2026 9:58:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 149
+Jun 15, 2026 9:58:13 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 149.0.7827.103. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given I visit "CMS Login" page                                                              # test.automation.framework.Steps.iVisitPage(java.lang.String)
+  When I log in to the Libercus application with valid user credentials                       # test.automation.steps.Libercus.LibercusSteps.iLogInToTheLibercusApplicationWithValidUserCredentials()
+  Then I should be on "CMS HomePage" page                                                     # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  Then I should see The Home text                                                             # test.automation.steps.Libercus.LibercusSteps.iShouldSeeTheHomeText()
+  When I navigate to "Wire Photos" from "Feeds" on "CMS HomePage"                             # test.automation.steps.Libercus.LibercusSteps.iNavigateToFromOn(java.lang.String,java.lang.String,java.lang.String)
+  And I select "Last Month" text in "TransmittedDateRange" dropdown on "CMS WireStories" page # test.automation.framework.Steps.iSelectTextInDropdownOnPage(java.lang.String,java.lang.String,java.lang.String)
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='TransmittedDateRange']"}
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eba4f101b7812279d7b754b304f0e93b, findElement {using=xpath, value=//select[@name='TransmittedDateRange']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.115 (daf70f9ddee..., userDataDir: /var/folders/9w/1z2zlx_d0dq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56313}, goog:processID: 59685, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56313/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eba4f101b7812279d7b754b304f0e93b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy3/jdk.proxy3.$Proxy39.getTagName(Unknown Source)
+	at org.openqa.selenium.support.ui.Select.<init>(Select.java:41)
+	at test.automation.framework.Steps.iSelectTextInDropdown(Steps.java:240)
+	at test.automation.framework.Steps.iSelectTextInDropdownOnPage(Steps.java:248)
+	at ✽.I select "Last Month" text in "TransmittedDateRange" dropdown on "CMS WireStories" page(classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/WireFeeds.feature:34)
+
+  Then I should be on "CMS WirePhotos" page                                                   # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  And I should check whether the photos are available.                                        # test.automation.steps.Libercus.RegressionSteps.iShouldCheckWhetherThePhotosAreAvailable()
+  And I select a Media file                                                                   # test.automation.steps.Libercus.RegressionSteps.iSelectAMediaFile()
+  When I click on "Use" element                                                               # test.automation.framework.Steps.iClickOnElement(java.lang.String)
+  When I enter the publish date for image on "CMS WireStories" page                           # test.automation.steps.Libercus.RegressionSteps.iEnterThePublishDateForImageOnPage(java.lang.String)
+  Then I tap on the use button                                                                # test.automation.steps.Libercus.RegressionSteps.iTapOnTheUseButton()
+  When I navigate to "Media Files" from "Content" on "CMS HomePage"                           # test.automation.steps.Libercus.LibercusSteps.iNavigateToFromOn(java.lang.String,java.lang.String,java.lang.String)
+  And I select a date for "MediaFiles"                                                        # test.automation.steps.Libercus.RegressionSteps.iSelectADateFor(java.lang.String)
+  And I select "Freetext Search" text in "selectSearchType" dropdown on "CMS MediaFiles" page # test.automation.framework.Steps.iSelectTextInDropdownOnPage(java.lang.String,java.lang.String,java.lang.String)
+  And I enter title in search field of MediaFiles                                             # test.automation.steps.Libercus.RegressionSteps.iEnterTitleInSearchFieldOfMediaFiles()
+  Then Verify the search results are displayed for MediaFiles                                 # test.automation.steps.Libercus.LibercusSteps.verifyTheSearchResultsAreDisplayedForMediaFiles()
+
+    Embedding  [image/png 131173 bytes]
+
+
+Failed scenarios:
+classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/WireFeeds.feature:3 # This scenario verifies that a wire story can be used and published in the CMS.
+classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/WireFeeds.feature:28 # This scenario validates that a wire photo can be used and published in the CMS.
+
+2 Scenarios (2 failed)
+38 Steps (2 failed, 23 skipped, 13 passed)
+4m44.755s
+
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.base/java.util.Random.nextInt(Random.java:551)
+	at test.automation.framework.Random.getRandomIntBetween(Random.java:6)
+	at test.automation.framework.Random.getRandomIndex(Random.java:10)
+	at test.automation.pages.Libercus.CMS.WireStories.selectStory(WireStories.java:70)
+	at test.automation.steps.Libercus.RegressionSteps.iSelectAStory(RegressionSteps.java:43)
+	at ✽.I select a story(classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/WireFeeds.feature:12)
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@name='TransmittedDateRange']"}
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eba4f101b7812279d7b754b304f0e93b, findElement {using=xpath, value=//select[@name='TransmittedDateRange']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.115 (daf70f9ddee..., userDataDir: /var/folders/9w/1z2zlx_d0dq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56313}, goog:processID: 59685, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56313/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eba4f101b7812279d7b754b304f0e93b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy3/jdk.proxy3.$Proxy39.getTagName(Unknown Source)
+	at org.openqa.selenium.support.ui.Select.<init>(Select.java:41)
+	at test.automation.framework.Steps.iSelectTextInDropdown(Steps.java:240)
+	at test.automation.framework.Steps.iSelectTextInDropdownOnPage(Steps.java:248)
+	at ✽.I select "Last Month" text in "TransmittedDateRange" dropdown on "CMS WireStories" page(classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/WireFeeds.feature:34)
+
+
+### CONGERO ###
+
+@CMS, @Regression
+Scenario: This scenario verifies that a user can create a Lookup Data entry in the Congero Administration module. # test/automation/features/SmokeTesting/RegressionTesting/CMS/CongeroAdministration.feature:3
+Jun 15, 2026 10:00:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 149
+Jun 15, 2026 10:00:34 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 149.0.7827.103. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given I visit "CMS Login" page                                                                                  # test.automation.framework.Steps.iVisitPage(java.lang.String)
+  When I log in to the Libercus application with valid user credentials                                           # test.automation.steps.Libercus.LibercusSteps.iLogInToTheLibercusApplicationWithValidUserCredentials()
+  Then I should be on "CMS HomePage" page                                                                         # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  Then I should see The Home text                                                                                 # test.automation.steps.Libercus.LibercusSteps.iShouldSeeTheHomeText()
+  When I navigate to "Lookup Data" from "Congero Administration" on "CMS HomePage"                                # test.automation.steps.Libercus.LibercusSteps.iNavigateToFromOn(java.lang.String,java.lang.String,java.lang.String)
+  Then I should be on "CMS LookupData" page                                                                       # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  When I click on "newButton" element                                                                             # test.automation.framework.Steps.iClickOnElement(java.lang.String)
+  Then I should see "LookupName" element                                                                          # test.automation.framework.Steps.iShouldSeeElement(java.lang.String,java.lang.String)
+  When I enter text in LookupName                                                                                 # test.automation.steps.Libercus.RegressionSteps.iEnterTextInLookupName()
+  And I select "enabled" check box                                                                                # test.automation.framework.Steps.iSelectCheckBox(java.lang.String)
+  And I enter text in Description                                                                                 # test.automation.steps.Libercus.RegressionSteps.iEnterTextInDescription()
+  And I select "Tags" text in "Source" dropdown                                                                   # test.automation.framework.Steps.iSelectTextInDropdown(java.lang.String,java.lang.String)
+  And I click save and close button on "CMS LookupData"                                                           # test.automation.steps.Libercus.LibercusSteps.iClickSaveAndCloseButtonOn(java.lang.String)
+
+@CMS, @Regression
+Scenario: This scenario validates that a user can create a new Congero Type with associated field definitions. # test/automation/features/SmokeTesting/RegressionTesting/CMS/CongeroAdministration.feature:20
+Jun 15, 2026 10:03:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 149
+Jun 15, 2026 10:03:08 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 149.0.7827.103. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given I visit "CMS Login" page                                                                               # test.automation.framework.Steps.iVisitPage(java.lang.String)
+  When I log in to the Libercus application with valid user credentials                                        # test.automation.steps.Libercus.LibercusSteps.iLogInToTheLibercusApplicationWithValidUserCredentials()
+  Then I should be on "CMS HomePage" page                                                                      # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  Then I should see The Home text                                                                              # test.automation.steps.Libercus.LibercusSteps.iShouldSeeTheHomeText()
+  When I navigate to "Congero Types" from "Congero Administration" on "CMS HomePage"                           # test.automation.steps.Libercus.LibercusSteps.iNavigateToFromOn(java.lang.String,java.lang.String,java.lang.String)
+  Then I should be on "CMS CongeroTypes" page                                                                  # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  When I click on "newButton" element                                                                          # test.automation.framework.Steps.iClickOnElement(java.lang.String)
+  Then I should see "TypeName" element                                                                         # test.automation.framework.Steps.iShouldSeeElement(java.lang.String,java.lang.String)
+  When I enter text in TypeName                                                                                # test.automation.steps.Libercus.RegressionSteps.iEnterTextInTypeName()
+  And I select "tags" text in "sectionId" dropdown                                                             # test.automation.framework.Steps.iSelectTextInDropdown(java.lang.String,java.lang.String)
+      org.openqa.selenium.NoSuchElementException: Cannot locate option with text: tags
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '26.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:167)
+	at test.automation.framework.Steps.iSelectTextInDropdown(Steps.java:242)
+	at ✽.I select "tags" text in "sectionId" dropdown(classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/CongeroAdministration.feature:30)
+
+  And I enter text in the objectFileName                                                                       # test.automation.steps.Libercus.RegressionSteps.iEnterTextInTheObjectFileName()
+  And I select "enabled" check box                                                                             # test.automation.framework.Steps.iSelectCheckBox(java.lang.String)
+  And I select "showInMenu" check box                                                                          # test.automation.framework.Steps.iSelectCheckBox(java.lang.String)
+  And I select "includeInSearch" check box                                                                     # test.automation.framework.Steps.iSelectCheckBox(java.lang.String)
+  And I select "Select Field" text in "FieldDefinitionsDataType" dropdown                                      # test.automation.framework.Steps.iSelectTextInDropdown(java.lang.String,java.lang.String)
+  When I click on "Add" element                                                                                # test.automation.framework.Steps.iClickOnElement(java.lang.String)
+  Then Verify the field is added under the field defination                                                    # test.automation.steps.Libercus.RegressionSteps.verifyTheFieldIsAddedUnderTheFieldDefination()
+  When I enter ID for fieldDefination                                                                          # test.automation.steps.Libercus.RegressionSteps.iEnterIDForFieldDefination()
+  And I enter Name for fieldDefination                                                                         # test.automation.steps.Libercus.RegressionSteps.iEnterNameForFieldDefination()
+  And I select "Tags" text in "dataSource" dropdown                                                            # test.automation.framework.Steps.iSelectTextInDropdown(java.lang.String,java.lang.String)
+  When I click save and close button on "CMS CongeroTypes"                                                     # test.automation.steps.Libercus.LibercusSteps.iClickSaveAndCloseButtonOn(java.lang.String)
+  And Refresh the page                                                                                         # test.automation.steps.Libercus.RegressionSteps.refreshThePage()
+  Then I should verify the created congero type is displayed                                                   # test.automation.steps.Libercus.RegressionSteps.iShouldVerifyTheCreatedCongeroTypeIsDisplayed()
+  When I click on "newButtonOfCongero" element on "CMS CongeroTypes" page                                      # test.automation.framework.Steps.iClickOnElementOnPage(java.lang.String,java.lang.String)
+  Then verify congero field is displayed                                                                       # test.automation.steps.Libercus.RegressionSteps.verifyCongeroFieldIsDisplayed()
+
+    Embedding  [image/png 262364 bytes]
+
+
+Failed scenarios:
+classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/CongeroAdministration.feature:20 # This scenario validates that a user can create a new Congero Type with associated field definitions.
+
+2 Scenarios (1 failed, 1 passed)
+38 Steps (1 failed, 15 skipped, 22 passed)
+4m45.275s
+
+
+org.openqa.selenium.NoSuchElementException: Cannot locate option with text: tags
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '26.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:167)
+	at test.automation.framework.Steps.iSelectTextInDropdown(Steps.java:242)
+	at ✽.I select "tags" text in "sectionId" dropdown(classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/CongeroAdministration.feature:30)
+
+
+### PRINTADMIN create-shape ###
+
+@CMS, @Regression
+Scenario: Verifies that a user can create a new shape, assign ID, Name, and template, and confirm its availability when creating a story. # test/automation/features/SmokeTesting/RegressionTesting/CMS/PrintAdministration.feature:3
+Jun 15, 2026 10:05:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 149
+Jun 15, 2026 10:05:21 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 149.0.7827.103. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  Given I visit "CMS Login" page                                                                                                          # test.automation.framework.Steps.iVisitPage(java.lang.String)
+  When I log in to the Libercus application with valid user credentials                                                                   # test.automation.steps.Libercus.LibercusSteps.iLogInToTheLibercusApplicationWithValidUserCredentials()
+  Then I should be on "CMS HomePage" page                                                                                                 # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  Then I should see The Home text                                                                                                         # test.automation.steps.Libercus.LibercusSteps.iShouldSeeTheHomeText()
+  When I navigate to "Shapes" from "Print Administration" on "CMS HomePage"                                                               # test.automation.steps.Libercus.LibercusSteps.iNavigateToFromOn(java.lang.String,java.lang.String,java.lang.String)
+  Then I should be on "CMS Shapes" page                                                                                                   # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  When I click on "newButton" element                                                                                                     # test.automation.framework.Steps.iClickOnElement(java.lang.String)
+  Then Shapes creation page should be displayed                                                                                           # test.automation.steps.Libercus.RegressionSteps.shapesCreationPageShouldBeDisplayed()
+  When I select "enabled" check box                                                                                                       # test.automation.framework.Steps.iSelectCheckBox(java.lang.String)
+  And I enter ID for shape                                                                                                                # test.automation.steps.Libercus.RegressionSteps.iEnterIDForShape()
+  And I enter Name for shape                                                                                                              # test.automation.steps.Libercus.RegressionSteps.iEnterNameForShape()
+  And I select "6 col Inside Left NEW FONTS" text in "templetDropdown" dropdown                                                           # test.automation.framework.Steps.iSelectTextInDropdown(java.lang.String,java.lang.String)
+      org.openqa.selenium.NoSuchElementException: Cannot locate option with text: 6 col Inside Left NEW FONTS
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '26.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:167)
+	at test.automation.framework.Steps.iSelectTextInDropdown(Steps.java:242)
+	at ✽.I select "6 col Inside Left NEW FONTS" text in "templetDropdown" dropdown(classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/PrintAdministration.feature:15)
+
+  Then I click save and close button on "CMS Shapes"                                                                                      # test.automation.steps.Libercus.LibercusSteps.iClickSaveAndCloseButtonOn(java.lang.String)
+  When Refresh the page                                                                                                                   # test.automation.steps.Libercus.RegressionSteps.refreshThePage()
+  When I navigate to "Stories" from "Content" on "CMS HomePage"                                                                           # test.automation.steps.Libercus.LibercusSteps.iNavigateToFromOn(java.lang.String,java.lang.String,java.lang.String)
+  Then I should be on "CMS StoryCreation" page                                                                                            # test.automation.framework.Steps.iShouldBeOnPage(java.lang.String)
+  And I select "PG Print" text in "channelDropdown" dropdown on "CMS StoryCreation" page                                                  # test.automation.framework.Steps.iSelectTextInDropdownOnPage(java.lang.String,java.lang.String,java.lang.String)
+  And I click on "newButton" element for "<Nth story>"                                                                                    # test.automation.steps.Libercus.LibercusSteps.iClickOnElementFor(java.lang.String,java.lang.String)
+  When I should see following elements:                                                                                                   # test.automation.framework.Steps.iShouldSeeFollowingElements(java.lang.String,java.util.List<java.lang.String>)
+    | slug   |
+    | status |
+  Then I verify that the shape is displayed                                                                                               # test.automation.steps.Libercus.RegressionSteps.iVerifyThatTheShapeIsDisplayed()
+
+    Embedding  [image/png 305896 bytes]
+
+
+Failed scenarios:
+classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/PrintAdministration.feature:3 # Verifies that a user can create a new shape, assign ID, Name, and template, and confirm its availability when creating a story.
+
+1 Scenarios (1 failed)
+20 Steps (1 failed, 8 skipped, 11 passed)
+2m47.249s
+
+
+org.openqa.selenium.NoSuchElementException: Cannot locate option with text: 6 col Inside Left NEW FONTS
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.5', java.version: '26.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:167)
+	at test.automation.framework.Steps.iSelectTextInDropdown(Steps.java:242)
+	at ✽.I select "6 col Inside Left NEW FONTS" text in "templetDropdown" dropdown(classpath:test/automation/features/SmokeTesting/RegressionTesting/CMS/PrintAdministration.feature:15)
+
+
+ALL DONE

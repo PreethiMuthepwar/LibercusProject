@@ -1,0 +1,511 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 6 tests using 2 workers
+
+  ✓  1 [regression] › tests/regression/product-administration.spec.ts:27:3 › @regression @CMS @ProductAdmin Product Administration › Create a new tag (53.1s)
+  ✘  2 [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (1.9m)
+  ✘  3 [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (retry #1) (1.7m)
+  ✘  4 [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style (1.6m)
+  ✘  5 [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style (retry #1) (1.9m)
+  ✘  6 [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style (1.7m)
+  ✘  7 [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style (retry #1) (1.8m)
+  ✘  8 [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template (1.7m)
+  ✘  9 [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template (retry #1) (1.8m)
+  ✘  10 [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template (1.9m)
+  ✘  11 [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template (retry #1) (1.9m)
+
+
+  1) [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape 
+
+    Error: Delete button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-delete').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Delete button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-delete').first()[22m
+    [2m    179 × locator resolved to <button disabled type="button" name="delete" role="button" class="lib-button-delete ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:133
+
+      131 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+      132 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 133 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      134 |       timeout: this.defaultWaitMs,
+      135 |     });
+      136 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:133:71)
+        at PrintAdminPage.deleteShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:198:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Delete button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-delete').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Delete button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-delete').first()[22m
+    [2m    179 × locator resolved to <button disabled type="button" name="delete" role="button" class="lib-button-delete ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:133
+
+      131 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+      132 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 133 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      134 |       timeout: this.defaultWaitMs,
+      135 |     });
+      136 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:133:71)
+        at PrintAdminPage.deleteShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:198:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style 
+
+    Error: Copy button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-copy').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Copy button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-copy').first()[22m
+    [2m    180 × locator resolved to <button disabled name="copy" type="button" role="button" class="lib-button-copy ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:133
+
+      131 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+      132 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 133 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      134 |       timeout: this.defaultWaitMs,
+      135 |     });
+      136 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:133:71)
+        at PrintAdminPage.copyStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:220:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:87:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Copy button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-copy').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Copy button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-copy').first()[22m
+    [2m    180 × locator resolved to <button disabled name="copy" type="button" role="button" class="lib-button-copy ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:133
+
+      131 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+      132 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 133 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      134 |       timeout: this.defaultWaitMs,
+      135 |     });
+      136 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:133:71)
+        at PrintAdminPage.copyStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:220:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:87:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-f07fd-Administration-Copy-a-style-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style 
+
+    Error: Delete button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-delete').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Delete button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-delete').first()[22m
+    [2m    180 × locator resolved to <button disabled type="button" name="delete" role="button" class="lib-button-delete ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:133
+
+      131 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+      132 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 133 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      134 |       timeout: this.defaultWaitMs,
+      135 |     });
+      136 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:133:71)
+        at PrintAdminPage.deleteStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:224:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:92:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Delete button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-delete').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Delete button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-delete').first()[22m
+    [2m    180 × locator resolved to <button disabled type="button" name="delete" role="button" class="lib-button-delete ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:133
+
+      131 |     // Copy/Delete buttons share the lib-button-copy/-delete class.
+      132 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 133 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      134 |       timeout: this.defaultWaitMs,
+      135 |     });
+      136 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:133:71)
+        at PrintAdminPage.deleteStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:224:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:92:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template 
+
+    Error: Delete button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-delete').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Delete button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-delete').first()[22m
+    [2m    178 × locator resolved to <button disabled type="button" name="delete" role="button" class="lib-button-delete ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:255
+
+      253 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      254 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 255 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      256 |       timeout: this.defaultWaitMs,
+      257 |     });
+      258 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.selectTemplateAndConfirm (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:255:71)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:122:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Delete button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-delete').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Delete button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-delete').first()[22m
+    [2m    178 × locator resolved to <button disabled type="button" name="delete" role="button" class="lib-button-delete ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:255
+
+      253 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      254 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 255 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      256 |       timeout: this.defaultWaitMs,
+      257 |     });
+      258 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.selectTemplateAndConfirm (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:255:71)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:122:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-9c6b5-istration-Delete-a-template-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template 
+
+    Error: Copy button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-copy').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Copy button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-copy').first()[22m
+    [2m    178 × locator resolved to <button disabled name="copy" type="button" role="button" class="lib-button-copy ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:255
+
+      253 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      254 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 255 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      256 |       timeout: this.defaultWaitMs,
+      257 |     });
+      258 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.selectTemplateAndConfirm (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:255:71)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:127:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Copy button should be enabled
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeEnabled[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-copy').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Copy button should be enabled with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-copy').first()[22m
+    [2m    178 × locator resolved to <button disabled name="copy" type="button" role="button" class="lib-button-copy ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary">…</button>[22m
+    [2m        - unexpected value "disabled"[22m
+
+
+       at ../pages/cms/print-admin.page.ts:255
+
+      253 |     await this.jsClick(boxes.nth(randomIntBetween(0, count - 1)));
+      254 |     const actionBtn = this.page.locator(`button.lib-button-${op.toLowerCase()}`);
+    > 255 |     await expect(actionBtn.first(), `${op} button should be enabled`).toBeEnabled({
+          |                                                                       ^
+      256 |       timeout: this.defaultWaitMs,
+      257 |     });
+      258 |     await this.jsClick(await this.firstVisible(actionBtn) ?? actionBtn.first());
+        at PrintAdminPage.selectTemplateAndConfirm (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:255:71)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:127:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-bbba1-inistration-Copy-a-template-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5 failed
+    [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape 
+    [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style 
+    [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style 
+    [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template 
+    [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template 
+  1 passed (18.2m)

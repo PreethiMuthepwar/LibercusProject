@@ -1,0 +1,224 @@
+### REGRESSION PDF drag ###
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 2 tests using 1 worker
+
+  ✘  1 [regression] › tests/regression/pdf-scenarios.spec.ts:40:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Create a Print Page and generate a PDF proof (3.0m)
+  ✘  2 [regression] › tests/regression/pdf-scenarios.spec.ts:50:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Add a created Print Ad to a Print Page (2.4m)
+
+
+  1) [regression] › tests/regression/pdf-scenarios.spec.ts:40:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Create a Print Page and generate a PDF proof 
+
+    Error: Layout/Output view should be displayed
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-output').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Layout/Output view should be displayed with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-output').first()[22m
+    [2m    178 × locator resolved to <button disabled type="button" name="output" role="button" class="lib-button-output ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary btnFixed">…</button>[22m
+    [2m        - unexpected value "hidden"[22m
+
+
+       at ../pages/base.page.ts:97
+
+       95 |   /** Assert an element is visible with a clear message (no silent failures). */
+       96 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    >  97 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+          |                                    ^
+       98 |   }
+       99 |
+      100 |   /**
+        at PrintPagesPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:97:36)
+        at PrintPagesPage.expectLayoutDisplayed (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-pages.page.ts:273:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/pdf-scenarios.spec.ts:46:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [regression] › tests/regression/pdf-scenarios.spec.ts:50:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Add a created Print Ad to a Print Page 
+
+    Error: Layout/Output view should be displayed
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-output').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Layout/Output view should be displayed with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-output').first()[22m
+    [2m    178 × locator resolved to <button disabled type="button" name="output" role="button" class="lib-button-output ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary btnFixed">…</button>[22m
+    [2m        - unexpected value "hidden"[22m
+
+
+       at ../pages/base.page.ts:97
+
+       95 |   /** Assert an element is visible with a clear message (no silent failures). */
+       96 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    >  97 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+          |                                    ^
+       98 |   }
+       99 |
+      100 |   /**
+        at PrintPagesPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:97:36)
+        at PrintPagesPage.expectLayoutDisplayed (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-pages.page.ts:273:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/pdf-scenarios.spec.ts:56:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [regression] › tests/regression/pdf-scenarios.spec.ts:40:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Create a Print Page and generate a PDF proof 
+    [regression] › tests/regression/pdf-scenarios.spec.ts:50:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Add a created Print Ad to a Print Page 
+### SMOKE drag/PDF/ProdView ###
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 3 tests using 1 worker
+
+  ✘  1 [cms] › tests/cms/drag-drop.spec.ts:29:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Create a print page and add a story to the layout (3.0m)
+  ✘  2 [cms] › tests/cms/drag-drop.spec.ts:43:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Generate a PDF proof for an existing print page (3.6m)
+  ✓  3 [cms] › tests/cms/drag-drop.spec.ts:55:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Production View shows the Rich Ad panel in edit mode (25.3s)
+
+
+  1) [cms] › tests/cms/drag-drop.spec.ts:29:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Create a print page and add a story to the layout 
+
+    Error: Layout/Output view should be displayed
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-output').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Layout/Output view should be displayed with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-output').first()[22m
+    [2m    178 × locator resolved to <button disabled type="button" name="output" role="button" class="lib-button-output ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary btnFixed">…</button>[22m
+    [2m        - unexpected value "hidden"[22m
+
+
+       at ../pages/base.page.ts:97
+
+       95 |   /** Assert an element is visible with a clear message (no silent failures). */
+       96 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    >  97 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+          |                                    ^
+       98 |   }
+       99 |
+      100 |   /**
+        at PrintPagesPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:97:36)
+        at PrintPagesPage.expectLayoutDisplayed (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-pages.page.ts:273:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/cms/drag-drop.spec.ts:36:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [cms] › tests/cms/drag-drop.spec.ts:43:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Generate a PDF proof for an existing print page 
+
+    Error: Layout/Output view should be displayed
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  locator('button.lib-button-output').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - Layout/Output view should be displayed with timeout 90000ms[22m
+    [2m  - waiting for locator('button.lib-button-output').first()[22m
+    [2m    177 × locator resolved to <button disabled type="button" name="output" role="button" class="lib-button-output ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary btnFixed">…</button>[22m
+    [2m        - unexpected value "hidden"[22m
+
+
+       at ../pages/base.page.ts:97
+
+       95 |   /** Assert an element is visible with a clear message (no silent failures). */
+       96 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    >  97 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+          |                                    ^
+       98 |   }
+       99 |
+      100 |   /**
+        at PrintPagesPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:97:36)
+        at PrintPagesPage.expectLayoutDisplayed (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-pages.page.ts:273:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/cms/drag-drop.spec.ts:50:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [cms] › tests/cms/drag-drop.spec.ts:29:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Create a print page and add a story to the layout 
+    [cms] › tests/cms/drag-drop.spec.ts:43:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Generate a PDF proof for an existing print page 
+  1 passed (7.2m)

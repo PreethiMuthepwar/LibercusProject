@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test Report</title>
+    <link rel="icon" href="http://reportbuilder.rajatthareja.com/rb.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection"/>
+    <link href="https://cdn.rawgit.com/rajatthareja/ReportBuilderJava/v1.0.3/css/report.builder.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<header class="cyan lighten-5">
+    <div class="row cyan lighten-1">
+        <div class="col m6 hide-on-small-only">
+            <h5 class="truncate white-text tooltipped" data-tooltip="Test Report">Test Report</h5>
+        </div>
+        <div class="col m6 s12 cyan lighten-1">
+            <ul class="tabs cyan lighten-1 row" style="overflow-x: hidden">
+                <li class="tab col s3"><a class=" cyan lighten-3 active blue-text waves-effect waves-light tooltipped" data-tooltip="Results Overview" href="#overview"><i class="material-icons">assessment</i> Overview</a></li>
+                <li class="tab col s3"><a class=" cyan lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios by Features" href="#features"><i class="material-icons">view_headline</i> Features</a></li>
+                <li class="tab col s3"><a class=" cyan lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios Summary Table" href="#summary"><i class="material-icons">view_comfy</i> Summary</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main class="cyan lighten-5">
+    <div class="row">
+
+<div id="overview" class="col s12 cyan lighten-5">
+    <div class="row">
+        <div class="col m4 s12">
+            <canvas id="featuresDoughnut" width="400" height="400"></canvas>
+            <table id="metaDataFeatures" class="bordered">
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="col m4 s12">
+            <canvas id="scenariosDoughnut" width="400" height="400"></canvas>
+            <table id="metaDataScenarios" class="bordered">
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="col m4 s12">
+            <table id="metaData" class="bordered">
+                <tbody>
+                <tr><th>Duration</th><td>4M4S</td></tr>
+                <tr><th>Platform</th><td>Windows 11</td></tr>
+                <tr><th>Date</th><td>2026-06-11T15:35:12.499973300</td></tr>
+                <tr><th>URL</th><td>https://tbmuatedit.libercus.net/admin#</td></tr>
+                <tr><th>Browser</th><td>chrome</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="features" class="col s12 cyan lighten-5">
+    <ul class="featureList collapsible popout" data-collapsible="expandable">
+        <li class="feature working">
+            <div class="collapsible-header cyan lighten-1 white-text waves-effect waves-light">
+                <i class="material-icons white-text">featured_play_list</i>
+                <b>Feature</b>&nbsp;This feature verifies the Output functionality of Print Pages in the Libercus CMS. (4M4S)
+            </div>
+            <div class="collapsible-body cyan lighten-4">
+                        <div class="chip"><i class="material-icons rotate-45">label</i>@OutputOfPages,</div>
+                        <div class="chip"><i class="material-icons rotate-45">label</i>@Smoke</div>
+                <ul class="collection scenarioList">
+                        <li class="collection-item scenario passed">
+                            <a class="waves-effect waves-light modal-trigger white-text" href="#f0s0">
+                                <b>Scenario</b> This scenario validates that a user can generate the PDF output for an existing print page in the CMS. (4M4S)
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div id="summary" class="col s12 cyan lighten-5">
+    <table id="summaryTable" class="bordered cyan lighten-1 white-text">
+        <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Scenario</th>
+            <th>Status</th>
+            <th class="hide-on-small-only">Error</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr class="passed">
+                        <td class="hoverable">This feature verifies the Output functionality of Print Pages in the Libercus CMS.</td>
+                        <td class="hoverable"><a class="modal-trigger white-text" href="#f0s0">This scenario validates that a user can generate the PDF output for an existing print page in the CMS.</a></td>
+                        <td class="hoverable uppercase">passed</td>
+                        <td class="hoverable hide-on-small-only"></td>
+                    </tr>
+        </tbody>
+    </table>
+</div>
+<div id="errors" class="col s12 cyan lighten-5">
+    <ul class="errorList collapsible popout" data-collapsible="expandable">
+    </ul>
+</div>
+    </div>
+</main>
+
+<footer class="page-footer cyan lighten-4">
+    <div class="footer-copyright cyan lighten-1">
+        <div class="container">
+            Happy Reporting!
+            <a class="white-text text-lighten-4 right" href="http://reportbuilderjava.rajatthareja.com">Generated by Report Builder</a>
+        </div>
+    </div>
+</footer>
+<div id="f0s0" class="modal modal-fixed-footer">
+    <div class="modal-content">
+                <div class="chip"><i class="material-icons rotate-45">label</i>@OutputOfPages,</div>
+                <div class="chip"><i class="material-icons rotate-45">label</i>@Smoke</div>
+                <div class="chip"><i class="material-icons rotate-45">label</i>@CMS</div>
+
+        <h5>This scenario validates that a user can generate the PDF output for an existing print page in the CMS.</h5>
+        file:src/main/resources/test/automation/features/SmokeTesting/CMS/OutputOfPrintpages.feature:5
+
+        <p><ul class="collection stepList">
+<li class="collection-item hook"></li>
+
+<li class="collection-item step passed">
+    <b>Given </b> I visit "CMS Login" page (13S)
+</li>
+
+<li class="collection-item step passed">
+    <b>When </b> I log in to the Libercus application with valid user credentials (5S)
+</li>
+
+<li class="collection-item step passed">
+    <b>Then </b> I should be on "CMS HomePage" page (5S)
+</li>
+
+<li class="collection-item step passed">
+    <b>Then </b> I should see The Home text (5S)
+</li>
+
+<li class="collection-item step passed">
+    <b>When </b> I navigate to "Print Pages" from "Content" on "CMS HomePage" (10S)
+</li>
+
+<li class="collection-item step passed">
+    <b>Then </b> I should be on "CMS PrintPages" page (5S)
+</li>
+
+<li class="collection-item step passed">
+    <b>Then </b> I select the customer-specific channel in "channelDropdown" dropdown (0S)
+</li>
+
+<li class="collection-item step passed">
+    <b>And </b> I select the date that has edition (26S)
+</li>
+
+<li class="collection-item step passed">
+    <b>And </b> Open any existing page (11S)
+</li>
+
+<li class="collection-item step passed">
+    <b>Then </b> I should see "pageLayout" element (5S)
+</li>
+
+<li class="collection-item step passed">
+    <b>And </b> I tap on Layout (20S)
+</li>
+
+<li class="collection-item step passed">
+    <b>Then </b> the Layout page should be displayed (0S)
+</li>
+
+<li class="collection-item step passed">
+    <b>And </b> I click on "output" element on "CMS OutputOfPrintPages" page (14S)
+</li>
+
+<li class="collection-item step passed">
+    <b>And </b> I select PDF Proof to desktop and i tap on ok button (5S)
+</li>
+
+<li class="collection-item step passed">
+    <b>Then </b> A dialog  will open once complete popup should be displayed (0S)
+</li>
+
+<li class="collection-item step passed">
+    <b>When </b> Your pdf is ready popup should be displayed (0S)
+</li>
+
+<li class="collection-item step passed">
+    <b>And </b> Tap on click this link to open pdf (23S)
+</li>
+
+<li class="collection-item step passed">
+    <b>When </b> I click on "popupCloseButton" element on "CMS PrintPages" page (9S)
+</li>
+
+<li class="collection-item step passed">
+    <b>Then </b> I click save and close button on "CMS PrintPages" (1M23S)
+</li>
+
+<li class="collection-item hook"></li>        </ul></p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></a>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+            $('#f0s0').modal();
+        $('li:empty').remove();
+    });
+</script>
+<script src="https://cdn.rawgit.com/rajatthareja/ReportBuilderJava/v1.0.3/js/report.builder.min.js"></script>
+
+</body>
+</html>

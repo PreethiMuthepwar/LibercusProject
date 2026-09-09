@@ -1,0 +1,114 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 5 tests using 2 workers
+
+  ✓  2 [regression] › tests/regression/print-administration.spec.ts:43:3 › @regression @CMS @PrintAdmin Print Administration › Search shapes returns matching results (30.8s)
+  ✓  3 [regression] › tests/regression/print-administration.spec.ts:80:3 › @regression @CMS @PrintAdmin Print Administration › Search styles returns matching results (21.0s)
+  ✓  4 [regression] › tests/regression/print-administration.spec.ts:115:3 › @regression @CMS @PrintAdmin Print Administration › Search templates returns matching results (36.9s)
+  ✘  1 [regression] › tests/regression/congero-administration.spec.ts:15:3 › @regression @CMS @Congero Congero Administration › Create a Lookup Data entry (1.7m)
+  ✓  5 [regression] › tests/regression/product-administration.spec.ts:37:3 › @regression @CMS @ProductAdmin Product Administration › Search tags returns matching results (40.9s)
+  ✘  6 [regression] › tests/regression/congero-administration.spec.ts:15:3 › @regression @CMS @Congero Congero Administration › Create a Lookup Data entry (retry #1) (1.9m)
+
+
+  1) [regression] › tests/regression/congero-administration.spec.ts:15:3 › @regression @CMS @Congero Congero Administration › Create a Lookup Data entry 
+
+    Error: "Lookup name" label should show
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  getByText('Lookup name', { exact: true }).first()
+    Expected: visible
+    Received: hidden
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - "Lookup name" label should show with timeout 90000ms[22m
+    [2m  - waiting for getByText('Lookup name', { exact: true }).first()[22m
+    [2m    175 × locator resolved to <div class="cell top">Lookup name</div>[22m
+    [2m        - unexpected value "hidden"[22m
+
+
+       at ../pages/base.page.ts:83
+
+      81 |   /** Assert an element is visible with a clear message (no silent failures). */
+      82 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    > 83 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+         |                                    ^
+      84 |   }
+      85 |
+      86 |   /**
+        at CongeroPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:83:36)
+        at CongeroPage.lookupNameDisplayed (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/congero.page.ts:46:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/congero-administration.spec.ts:18:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: "Lookup name" label should show
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  getByText('Lookup name', { exact: true }).first()
+    Expected: visible
+    Received: hidden
+    Timeout:  90000ms
+
+    Call log:
+    [2m  - "Lookup name" label should show with timeout 90000ms[22m
+    [2m  - waiting for getByText('Lookup name', { exact: true }).first()[22m
+    [2m    174 × locator resolved to <div class="cell top">Lookup name</div>[22m
+    [2m        - unexpected value "hidden"[22m
+
+
+       at ../pages/base.page.ts:83
+
+      81 |   /** Assert an element is visible with a clear message (no silent failures). */
+      82 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    > 83 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+         |                                    ^
+      84 |   }
+      85 |
+      86 |   /**
+        at CongeroPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:83:36)
+        at CongeroPage.lookupNameDisplayed (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/congero.page.ts:46:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/congero-administration.spec.ts:18:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/congero-administration--re-ce559--Create-a-Lookup-Data-entry-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [regression] › tests/regression/congero-administration.spec.ts:15:3 › @regression @CMS @Congero Congero Administration › Create a Lookup Data entry 
+  4 passed (3.8m)

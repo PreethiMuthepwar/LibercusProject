@@ -1,0 +1,8 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 1 test using 1 worker
+
+  ✓  1 [cms] › tests/cms/content-creation.spec.ts:96:3 › @smoke @CMS @Creation Content creation › Create a Rich Media Ad (33.6s)
+
+  1 passed (50.7s)

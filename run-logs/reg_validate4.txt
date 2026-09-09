@@ -1,0 +1,106 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 5 tests using 1 worker
+
+  ✘  1 [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (2.4m)
+  ✘  2 [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (retry #1) (2.1m)
+  ✓  3 [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style (14.7s)
+  ✓  4 [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style (9.2s)
+  ✓  5 [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template (11.2s)
+  ✓  6 [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template (28.6s)
+
+
+  1) [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape 
+
+    Error: record count should reach 1284
+
+    record count should reach 1284
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1284[39m
+    Received: [31m1285[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/print-admin.page.ts:172
+
+      170 |         message: `record count should reach ${op === 'Copy' ? before + 1 : before - 1}`,
+      171 |       })
+    > 172 |       .toBe(op === 'Copy' ? before + 1 : before - 1);
+          |        ^
+      173 |   }
+      174 |
+      175 |   /** Search a list then assert every result row contains the term (Selenium verifySearchResults). */
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:172:8)
+        at PrintAdminPage.deleteShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:225:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: record count should reach 1284
+
+    record count should reach 1284
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1284[39m
+    Received: [31m1285[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/print-admin.page.ts:172
+
+      170 |         message: `record count should reach ${op === 'Copy' ? before + 1 : before - 1}`,
+      171 |       })
+    > 172 |       .toBe(op === 'Copy' ? before + 1 : before - 1);
+          |        ^
+      173 |   }
+      174 |
+      175 |   /** Search a list then assert every result row contains the term (Selenium verifySearchResults). */
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:172:8)
+        at PrintAdminPage.deleteShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:225:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape 
+  4 passed (5.9m)

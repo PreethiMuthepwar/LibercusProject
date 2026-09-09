@@ -1,0 +1,117 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 36 tests using 3 workers
+
+  ✓   2 [pf3] › tests/pf3/links.spec.ts:15:3 › @pf3 @links PF3 links & article navigation › Page-body hyperlinks redirect to the referenced page (3.4s)
+  ✓   3 [pf3] › tests/pf3/menu.spec.ts:19:3 › @pf3 @menu PF3 main menu › TOC menu opens the Table of Contents (6.0s)
+  ✓   4 [pf3] › tests/pf3/links.spec.ts:19:3 › @pf3 @links PF3 links & article navigation › Jump links navigate to the referenced section/page (3.3s)
+  ✓   1 [pf3] › tests/pf3/ads.spec.ts:13:3 › @pf3 @ads PF3 Ads/Puzzles › Print Ads/Puzzles panel opens (7.3s)
+  ✓   5 [pf3] › tests/pf3/menu.spec.ts:24:3 › @pf3 @menu PF3 main menu › Sections menu opens the Sections view (6.3s)
+  ✓   7 [pf3] › tests/pf3/ads.spec.ts:18:3 › @pf3 @ads PF3 Ads/Puzzles › Interactive Ads panel opens (7.4s)
+  ✓   6 [pf3] › tests/pf3/links.spec.ts:23:3 › @pf3 @links PF3 links & article navigation › Article view Next/Previous navigation works (10.7s)
+  ✓   8 [pf3] › tests/pf3/menu.spec.ts:29:3 › @pf3 @menu PF3 main menu › Pages menu opens the Pages view (5.6s)
+  ✓  10 [pf3] › tests/pf3/reader.spec.ts:16:3 › @pf3 @reader PF3 reader › Forward section navigation (3.4s)
+  ✓   9 [pf3] › tests/pf3/ads.spec.ts:24:3 › @pf3 @ads PF3 Ads/Puzzles › Interactive Puzzles panel opens with puzzle tiles (6.3s)
+  ✓  11 [pf3] › tests/pf3/menu.spec.ts:34:3 › @pf3 @menu PF3 main menu › Editions menu opens the Editions view (5.8s)
+  ✓  12 [pf3] › tests/pf3/reader.spec.ts:21:3 › @pf3 @reader PF3 reader › Backward section navigation (3.8s)
+  ✓  14 [pf3] › tests/pf3/menu.spec.ts:39:3 › @pf3 @menu PF3 main menu › Search menu opens the Search view (5.7s)
+  ✓  13 [pf3] › tests/pf3/ads.spec.ts:30:3 › @pf3 @ads PF3 Ads/Puzzles › Inserts opens the inserts provider in a new tab (9.6s)
+  ✓  16 [pf3] › tests/pf3/menu.spec.ts:47:3 › @pf3 @menu PF3 main menu › Settings menu opens the Settings view (5.7s)
+  ✓  17 [pf3] › tests/pf3/settings.spec.ts:13:3 › @pf3 @settings PF3 settings › Menu layout can be set to the Left side (7.1s)
+  ✓  18 [pf3] › tests/pf3/menu.spec.ts:52:3 › @pf3 @menu PF3 main menu › Ads menu shows the Ads/Puzzles options (5.7s)
+  ✓  20 [pf3] › tests/pf3/menu.spec.ts:64:3 › @pf3 @menu PF3 main menu › Home menu returns to the reader after navigating (6.0s)
+  ✓  19 [pf3] › tests/pf3/settings.spec.ts:20:3 › @pf3 @settings PF3 settings › Theme colour can be set to Blue (9.0s)
+  ✓  21 [pf3] › tests/pf3/toc.spec.ts:15:3 › @pf3 @toc PF3 Table of Contents › Each section lists pages that belong to it (5.5s)
+  ✓  22 [pf3] › tests/pf3/settings.spec.ts:27:3 › @pf3 @settings PF3 settings › Display option can be set to Double Page (8.3s)
+  ✓  23 [pf3] › tests/pf3/toc.spec.ts:19:3 › @pf3 @toc PF3 Table of Contents › Selecting section A lists its pages (6.9s)
+  ✓  25 [pf3] › tests/pf3/toc.spec.ts:24:3 › @pf3 @toc PF3 Table of Contents › Section A / Page A1 lists its stories (8.0s)
+  ✓  24 [pf3] › tests/pf3/views.spec.ts:16:3 › @pf3 @views PF3 views › Pages view: select section A and open page A2 (1.8m)
+  ✓  26 [pf3] › tests/pf3/views.spec.ts:26:3 › @pf3 @views PF3 views › Editions view: open an available edition by date (7.1s)
+  ✓  27 [pf3] › tests/pf3/views.spec.ts:34:3 › @pf3 @views PF3 views › Search: Today's Edition with a keyword (5.7s)
+  ✓  28 [pf3] › tests/pf3/views.spec.ts:44:3 › @pf3 @views PF3 views › Search: Previous Edition with a keyword (5.9s)
+  ✘  29 [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab (43.2s)
+  ✘  30 [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab (retry #1) (43.1s)
+  ✓  31 [pf3] › tests/pf3/views.spec.ts:65:3 › @pf3 @views PF3 views › Article view → TOC (8.2s)
+  ✓  32 [pf3] › tests/pf3/views.spec.ts:73:3 › @pf3 @views PF3 views › Article view → Settings (8.1s)
+  ✓  15 [pf3] › tests/pf3/reader.spec.ts:27:3 › @pf3 @reader PF3 reader › Forward and backward page navigation (11.5m)
+  ✓  33 [pf3] › tests/pf3/reader.spec.ts:34:3 › @pf3 @reader PF3 reader › Sections view opens and a section can be opened (6.3s)
+  ✓  34 [pf3] › tests/pf3/reader.spec.ts:42:3 › @pf3 @reader PF3 reader › Help view opens with header (5.5s)
+  ✓  35 [pf3] › tests/pf3/reader.spec.ts:48:3 › @pf3 @reader PF3 reader › Article view opens for a clicked story (7.0s)
+  ✓  36 [pf3] › tests/pf3/reader.spec.ts:54:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page (6.5s)
+  ✓  37 [pf3] › tests/pf3/reader.spec.ts:60:3 › @pf3 @reader PF3 reader › Display mode can switch to Single Page (6.1s)
+
+
+  1) [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab 
+
+    Error: No ad image on the current edition opened a new tab
+
+       at ../pages/pf3/pf3-home.page.ts:468
+
+      466 |       if (late) return late;
+      467 |     }
+    > 468 |     throw new Error('No ad image on the current edition opened a new tab');
+          |           ^
+      469 |   }
+      470 |
+      471 |   // ── Search view ──
+        at Pf3HomePage.clickAdImageExpectNewTab (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:468:11)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/views.spec.ts:58:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No ad image on the current edition opened a new tab
+
+       at ../pages/pf3/pf3-home.page.ts:468
+
+      466 |       if (late) return late;
+      467 |     }
+    > 468 |     throw new Error('No ad image on the current edition opened a new tab');
+          |           ^
+      469 |   }
+      470 |
+      471 |   // ── Search view ──
+        at Pf3HomePage.clickAdImageExpectNewTab (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:468:11)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/views.spec.ts:58:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [pf3] › tests/pf3/reader.spec.ts (12.1m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 failed
+    [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab 
+  35 passed (12.7m)

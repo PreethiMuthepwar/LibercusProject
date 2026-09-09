@@ -1,0 +1,9 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 2 tests using 1 worker
+
+  ✓  1 [regression] › tests/regression/print-administration.spec.ts:54:3 › @regression @CMS @PrintAdmin Print Administration › Copy an existing shape (1.4m)
+  ✓  2 [regression] › tests/regression/print-administration.spec.ts:59:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (57.2s)
+
+  2 passed (2.9m)

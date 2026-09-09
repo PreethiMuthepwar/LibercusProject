@@ -1,0 +1,93 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 4 tests using 2 workers
+
+  ✓  1 [pf3] › tests/pf3/settings.spec.ts:27:3 › @pf3 @settings PF3 settings › Display option can be set to Double Page (7.6s)
+  ✓  2 [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page (13.9s)
+  ✓  3 [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Search: Advanced Search opens a new tab (9.0s)
+  ✘  4 [pf3] › tests/pf3/reader.spec.ts:62:3 › @pf3 @reader PF3 reader › Display mode can switch to Single Page (7.5s)
+  ✘  5 [pf3] › tests/pf3/reader.spec.ts:62:3 › @pf3 @reader PF3 reader › Display mode can switch to Single Page (retry #1) (7.5s)
+
+
+  1) [pf3] › tests/pf3/reader.spec.ts:62:3 › @pf3 @reader PF3 reader › Display mode can switch to Single Page 
+
+    Error: single-page should keep the visible page count
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+       at ../pages/pf3/pf3-home.page.ts:565
+
+      563 |       expect(after, 'double-page should change the visible page count').not.toBe(beforeCount);
+      564 |     } else {
+    > 565 |       expect(after, 'single-page should keep the visible page count').toBe(beforeCount);
+          |                                                                       ^
+      566 |     }
+      567 |   }
+      568 |
+        at Pf3HomePage.expectDisplayOption (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:565:71)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/reader.spec.ts:66:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: single-page should keep the visible page count
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+       at ../pages/pf3/pf3-home.page.ts:565
+
+      563 |       expect(after, 'double-page should change the visible page count').not.toBe(beforeCount);
+      564 |     } else {
+    > 565 |       expect(after, 'single-page should keep the visible page count').toBe(beforeCount);
+          |                                                                       ^
+      566 |     }
+      567 |   }
+      568 |
+        at Pf3HomePage.expectDisplayOption (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:565:71)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/reader.spec.ts:66:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/reader--pf3-reader-PF3-rea-c30a3-e-can-switch-to-Single-Page-pf3-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [pf3] › tests/pf3/reader.spec.ts:62:3 › @pf3 @reader PF3 reader › Display mode can switch to Single Page 
+  3 passed (43.2s)

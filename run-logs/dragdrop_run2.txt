@@ -1,0 +1,191 @@
+### REGRESSION PDF drag ###
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 2 tests using 1 worker
+
+  ✘  1 [regression] › tests/regression/pdf-scenarios.spec.ts:40:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Create a Print Page and generate a PDF proof (3.4m)
+  ✘  2 [regression] › tests/regression/pdf-scenarios.spec.ts:50:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Add a created Print Ad to a Print Page (1.8m)
+
+
+  1) [regression] › tests/regression/pdf-scenarios.spec.ts:40:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Create a Print Page and generate a PDF proof 
+
+    Error: PDF proof option should appear
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('div[role=\'dialog\'] input').nth(1)
+    Expected: visible
+    Timeout: 90000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - PDF proof option should appear with timeout 90000ms[22m
+    [2m  - waiting for locator('div[role=\'dialog\'] input').nth(1)[22m
+
+
+       at ../pages/base.page.ts:97
+
+       95 |   /** Assert an element is visible with a clear message (no silent failures). */
+       96 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    >  97 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+          |                                    ^
+       98 |   }
+       99 |
+      100 |   /**
+        at PrintPagesPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:97:36)
+        at PrintPagesPage.generatePdfProof (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-pages.page.ts:358:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/pdf-scenarios.spec.ts:47:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pdf-scenarios--regression--c9c82-ge-and-generate-a-PDF-proof-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [regression] › tests/regression/pdf-scenarios.spec.ts:50:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Add a created Print Ad to a Print Page 
+
+    Error: No print ads available to add to the page (date/data-dependent)
+
+       at ../pages/cms/print-pages.page.ts:301
+
+      299 |     await this.waitForListSettled().catch(() => {});
+      300 |     const n = await this.addAdsMarked.count();
+    > 301 |     if (n === 0) throw new Error('No print ads available to add to the page (date/data-dependent)');
+          |                        ^
+      302 |     await this.jsClick(this.addAdsMarked.first());
+      303 |     await this.jsClick((await this.firstVisible(this.saveStoryButton)) ?? this.saveStoryButton.first());
+      304 |     await this.page.waitForTimeout(1_500);
+        at PrintPagesPage.addPrintAdToPage (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-pages.page.ts:301:24)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/pdf-scenarios.spec.ts:57:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pdf-scenarios--regression--1cc42-ed-Print-Ad-to-a-Print-Page-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [regression] › tests/regression/pdf-scenarios.spec.ts:40:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Create a Print Page and generate a PDF proof 
+    [regression] › tests/regression/pdf-scenarios.spec.ts:50:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Add a created Print Ad to a Print Page 
+### SMOKE drag/PDF ###
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 2 tests using 1 worker
+
+  ✘  1 [cms] › tests/cms/drag-drop.spec.ts:29:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Create a print page and add a story to the layout (7.9m)
+  ✘  2 [cms] › tests/cms/drag-drop.spec.ts:43:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Generate a PDF proof for an existing print page (3.3m)
+
+
+  1) [cms] › tests/cms/drag-drop.spec.ts:29:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Create a print page and add a story to the layout 
+
+    TimeoutError: locator.boundingBox: Timeout 90000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('//div[@class=\'libPageStory libTruncated\']/..').first()[22m
+
+
+       at ../pages/cms/print-pages.page.ts:317
+
+      315 |     const source = kind === 'story' ? this.dragSourceStory : this.dragSourceAd;
+      316 |     await source.first().scrollIntoViewIfNeeded().catch(() => {});
+    > 317 |     const src = await source.first().boundingBox();
+          |                                      ^
+      318 |     const tgt = await this.layoutTarget.first().boundingBox();
+      319 |     if (!src || !tgt) throw new Error('Drag source or layout target not found (page editor not ready)');
+      320 |     await this.page.mouse.move(src.x + src.width / 2, src.y + src.height / 2);
+        at PrintPagesPage.dragOntoLayout (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-pages.page.ts:317:38)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/cms/drag-drop.spec.ts:38:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/drag-drop--smoke-CMS-layou-b61f0-d-add-a-story-to-the-layout-cms/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [cms] › tests/cms/drag-drop.spec.ts:43:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Generate a PDF proof for an existing print page 
+
+    Error: PDF proof option should appear
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('div[role=\'dialog\'] input').nth(1)
+    Expected: visible
+    Timeout: 90000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - PDF proof option should appear with timeout 90000ms[22m
+    [2m  - waiting for locator('div[role=\'dialog\'] input').nth(1)[22m
+
+
+       at ../pages/base.page.ts:97
+
+       95 |   /** Assert an element is visible with a clear message (no silent failures). */
+       96 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    >  97 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+          |                                    ^
+       98 |   }
+       99 |
+      100 |   /**
+        at PrintPagesPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:97:36)
+        at PrintPagesPage.generatePdfProof (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-pages.page.ts:358:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/cms/drag-drop.spec.ts:51:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/drag-drop--smoke-CMS-layou-e688a--for-an-existing-print-page-cms/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [cms] › tests/cms/drag-drop.spec.ts:29:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Create a print page and add a story to the layout 
+    [cms] › tests/cms/drag-drop.spec.ts:43:3 › @smoke @CMS @layout Print Page layout / PDF / Production View › Generate a PDF proof for an existing print page 

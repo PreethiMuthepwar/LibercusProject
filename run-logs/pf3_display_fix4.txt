@@ -1,0 +1,10 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 3 tests using 1 worker
+
+  ✓  1 [pf3] › tests/pf3/reader.spec.ts:59:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page (23.9s)
+  ✓  2 [pf3] › tests/pf3/reader.spec.ts:65:3 › @pf3 @reader PF3 reader › Display mode can switch to Single Page (7.0s)
+  ✓  3 [pf3] › tests/pf3/settings.spec.ts:27:3 › @pf3 @settings PF3 settings › Display option can be set to Double Page (24.0s)
+
+  3 passed (1.2m)

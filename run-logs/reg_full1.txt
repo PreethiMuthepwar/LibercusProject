@@ -1,0 +1,573 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 24 tests using 3 workers
+
+  ✓   1 [regression] › tests/regression/congero-administration.spec.ts:15:3 › @regression @CMS @Congero Congero Administration › Create a Lookup Data entry (11.4s)
+  ✓   2 [regression] › tests/regression/pdf-scenarios.spec.ts:23:3 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Create a Print Ad in the CMS (24.4s)
+  -   5 [regression] › tests/regression/pdf-scenarios.spec.ts:35:8 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Create a Print Page and generate a PDF proof
+  -   6 [regression] › tests/regression/pdf-scenarios.spec.ts:42:8 › @regression @CMS @PDFScenarios PDF / Print Page scenarios › Add a created Print Ad to a Print Page
+  ✘   4 [regression] › tests/regression/congero-administration.spec.ts:24:3 › @regression @CMS @Congero Congero Administration › Create a Congero Type with a field definition (18.0s)
+  ✘   8 [regression] › tests/regression/congero-administration.spec.ts:24:3 › @regression @CMS @Congero Congero Administration › Create a Congero Type with a field definition (retry #1) (12.5s)
+  ✘   3 [regression] › tests/regression/print-administration.spec.ts:23:3 › @regression @CMS @PrintAdmin Print Administration › Create a shape and confirm it is available when creating a story (1.6m)
+  ✓   7 [regression] › tests/regression/product-administration.spec.ts:15:3 › @regression @CMS @ProductAdmin Product Administration › Create a new user and log in as that user (1.3m)
+  ✓  11 [regression] › tests/regression/product-administration.spec.ts:27:3 › @regression @CMS @ProductAdmin Product Administration › Create a new tag (32.6s)
+  ✘   9 [regression] › tests/regression/wire-feeds.spec.ts:24:3 › @regression @CMS @WireFeeds Wire Feeds › Use a wire story and find it in Stories by slug (1.8m)
+  ✓  12 [regression] › tests/regression/product-administration.spec.ts:37:3 › @regression @CMS @ProductAdmin Product Administration › Search tags returns matching results (25.2s)
+  ✘  10 [regression] › tests/regression/print-administration.spec.ts:23:3 › @regression @CMS @PrintAdmin Print Administration › Create a shape and confirm it is available when creating a story (retry #1) (1.5m)
+  ✓  14 [regression] › tests/regression/print-administration.spec.ts:43:3 › @regression @CMS @PrintAdmin Print Administration › Search shapes returns matching results (21.5s)
+  ✘  13 [regression] › tests/regression/wire-feeds.spec.ts:24:3 › @regression @CMS @WireFeeds Wire Feeds › Use a wire story and find it in Stories by slug (retry #1) (1.7m)
+  ✘  15 [regression] › tests/regression/print-administration.spec.ts:48:3 › @regression @CMS @PrintAdmin Print Administration › Copy an existing shape (2.4m)
+  ✘  16 [regression] › tests/regression/wire-feeds.spec.ts:48:3 › @regression @CMS @WireFeeds Wire Feeds › Use a wire photo and find it in Media Files by title (1.8m)
+  ✘  18 [regression] › tests/regression/wire-feeds.spec.ts:48:3 › @regression @CMS @WireFeeds Wire Feeds › Use a wire photo and find it in Media Files by title (retry #1) (25.1s)
+  ✘  17 [regression] › tests/regression/print-administration.spec.ts:48:3 › @regression @CMS @PrintAdmin Print Administration › Copy an existing shape (retry #1) (2.3m)
+  ✘  19 [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (2.3m)
+  ✘  20 [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape (retry #1) (2.4m)
+  ✓  21 [regression] › tests/regression/print-administration.spec.ts:59:3 › @regression @CMS @PrintAdmin Print Administration › Create a style and confirm it is displayed on a story (1.2m)
+  ✓  22 [regression] › tests/regression/print-administration.spec.ts:80:3 › @regression @CMS @PrintAdmin Print Administration › Search styles returns matching results (11.4s)
+  ✓  23 [regression] › tests/regression/print-administration.spec.ts:85:3 › @regression @CMS @PrintAdmin Print Administration › Copy a style (11.4s)
+  ✘  24 [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style (2.1m)
+  ✓  25 [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style (retry #1) (31.8s)
+  ✓  26 [regression] › tests/regression/print-administration.spec.ts:96:3 › @regression @CMS @PrintAdmin Print Administration › Create a template and confirm it appears on a print page (2.2m)
+  ✓  27 [regression] › tests/regression/print-administration.spec.ts:115:3 › @regression @CMS @PrintAdmin Print Administration › Search templates returns matching results (41.3s)
+  ✓  28 [regression] › tests/regression/print-administration.spec.ts:120:3 › @regression @CMS @PrintAdmin Print Administration › Delete a template (57.4s)
+  ✓  29 [regression] › tests/regression/print-administration.spec.ts:125:3 › @regression @CMS @PrintAdmin Print Administration › Copy a template (53.9s)
+  ✓  30 [regression] › tests/regression/print-administration.spec.ts:131:3 › @regression @CMS @PrintAdmin Print Administration › Create an image style (49.7s)
+  ✓  31 [regression] › tests/regression/print-administration.spec.ts:141:3 › @regression @CMS @PrintAdmin Print Administration › Create a jump style (22.8s)
+
+
+  1) [regression] › tests/regression/congero-administration.spec.ts:24:3 › @regression @CMS @Congero Congero Administration › Create a Congero Type with a field definition 
+
+    Error: Option "tags" not found. Available: None | 50+ | A&E | Additional Resources | Adtest | Agriculture | Alexander Cohen | Alexandra Mester | Allison Dunn | Amateur | Amy Stone | Amy Voigt | Andy Morrison | Animals | Ann Weber | Art | Arts | ArtsHold | Automotive | B Partners | B Partners - Ability Center | B Partners - Anthem Blue Cross | B Partners - Arbor Avenue Wealth Mgmt | B Partners - Arrowhead Behavioral | B Partners - Balance & Mobility | B Partners - BGSU | B Partners - Black Diamond | B Partners - Blue Ribbon Hemp | B Partners - Bolt Express | B Partners - Boyk Law Offices | B Partners - CASA | B Partners - Epworth Church | B Partners - Exciting Windows by Couture | B Partners - Explore 419 | B Partners - Fair Housing Center | B Partners - Finixio | B Partners - Fulton Cty Health Center | B Partners - Glass City Academy | B Partners - GTCF | B Partners - Hammill Medical | B Partners - Holiday Gift Guide | B Partners - Holt Roofing Company | B Partners - Homes | B Partners - HOPE Toledo | B Partners - Hylant | B Partners - Imagination Station | B Partners - JustCBD | B Partners - Kapios | B Partners - Keystone Capacity Solutions | B Partners - Kids of Character | B Partners - La-Z-Boy | B Partners - Leadership Toledo | B Partners - Levis Commons | B Partners - Lott Industries | B Partners - Lourdes University | B Partners - Lucas County Recorder | B Partners - Luther Home of Mercy | B Partners - McLaren St. Luke's | B Partners - Med1Care | B Partners - Mighty Earth | B Partners - Ministry of Hemp | B Partners - Miracle-Ear | B Partners - Mission Lean | B Partners - MVCDS | B Partners - Ohioans Home Healthcare | B Partners - OSU Engineering | B Partners - Oswald Companies | B Partners - Phoenix Investors | B Partners - Precision Heart Rhythm | B Partners - ProMedica | B Partners - ProMedica Medical Mgmt | B Partners - Readers' Choice Awards | B Partners - Restaurants | B Partners - Ronald McDonald House | B Partners - Savage & Associates | B Partners - Shumaker | B Partners - Solheim Cup | B Partners - Spengler Nathanson | B Partners - Tarta | B Partners - Ternion | B Partners - Toledo Clinic | B Partners - Toledo Museum of Art | B Partners - Toledo Public Library | B Partners - Toledo Zoo & Aquarium | B Partners - United Way | B Partners - University of Toledo | B Partners - USA Insulation | B Partners - UT Physicians | B Partners - UTMC | B Partners - Western Toledo Academy | B Partners - Widget - Frontpage | B Partners - Widget - Story Page | B Partners - Yark Automotive Group | B Partners - Zenobia Shriners | Barbara Hendel | Ben Konop | BGSU | Big Story | Big Story (TEST) | Bin Laden | Birding Week 2018 | Biz Desk | Biz Desk Hold | Blade Editorial Board | Blade Vendor Page | Blogs | Books | BooksPrint | Breaking News | Brian Buckey | Brian Dugger | British-Royalty | Browns | BTN | Burris & Walters | Business | Campus Connection | Cavaliers | Channel 13 Blade Briefings | Chip Towns | City | City Desk | City Desk Hold | Classifieds | Code 18: Unsolved | College | College Highlights | Columnists | Community Events | Connect With Us | Contact Us | Coronavirus | Coupon Queen | Coupon Queen Coupons | Coupon Queen Q&A | Coupon Queen Submissions | Courts | Culture | Culture Shock | Customer Service | Daily Log | Dale Emch | Dan Neman | Dan Simpson | Dana Open | Dave Murray | Dave Zapotosky | David Briggs | David Kushma | David Patch | David Shribman | David Yonke | Death Row Inmates | Deaths | Decoder | Developing News | Development | Dinner Tonight | Dogs for Adoption | Don't send to News Break | Dr. Gary Thompson | E-Snip & Save | East | Economy | Edit | EditF | Editorial Cartoons | Editorials | Education | Elect_Hold | Election Results EntryDelete | Energy | Environment | Events | Explore 419 | Facebook Test | Featured Blogs | Featured Blogs - Coop Scoop | Featured Columns: A&E | Featured Columns: Business | Featured Columns: Frontpage Test | Featured Columns: Home | Featured Columns: Local | Featured Columns: News | Featured Columns: Sports | Featured Editorial: Home | Features Desk | Features Desk Hold | Fishing Report | Food | Forum | ForumPrint | Frogtown | Frontpage Test | Galleries | Gardening | Geoff Burns | Gift Guide | Glass City Gametime | Golf | Guardians | Health & Well-Being | Health & Well-Being | High School | Holiday Cookies | Home | Hunting Report | I Heart My Job Submission | Jack Lessenberry | Jane Schmucker | Javonte Anderson | Jay Skebba | Jeff Schmucker | Jennifer Feehan | Jeremy Schneider | Jeremy Wadsworth | Jetta Fraser | Jim Provance | Jimmy Miller | Jobs | John Wagner | Jon Chavez | Julie Njaim | Keith Burris | Kendall Downs | Kirk Baird | Kris Turner | Kyle Rowland | Labor | Latest Headlines | Lauren Lindstrom | Letter | Letters to the Editor | Lions | Lisa Dutton | Living | LivingHold | Local | Local Agate Edit | Local Agate Entry | Local Agate Entry-copy | Lori King | Lourdes | Mag | Manage Your Content | Marathon Classic | Marilou Johanek | Mark Monroe | Mark Reiter | Mark Zaborney | Mary Alice Powell | Mary Bilyeu | Matt Markey | Matt Thompson | Meals with Maddie | Medical | Michigan | Mike Pearson | Mike Sigov | Monday Memories | Most Wanted | Movies | Mud Hens | Music-Theater-Dance | Must Read | Must Read - Frontpage | My Account | Natalie Trusso Cafarello | Nation | News | NewsSlide | NewsTest | Nicholas Piotrowicz | Nicki Gorny | NIE | Nolan Rosenkrans | North | Obit_Hold | Obituaries | Ohio State | Olympics | Op-Ed Columns | OpEd | Opinion | Our Town Business | Our Town Going Out | Our Town Guest Columns | Our Town Home - Bedford Township | Our Town Home - Holland | Our Town Home - Maumee | Our Town Home - Northwood | Our Town Home - Oregon | Our Town Home - Ottawa Hills | Our Town Home - Perrysburg | Our Town Home - Rossford | Our Town Home - Springfield Township | Our Town Home - Sylvania | Our Town News | Our Town Person of the Week | Our Town Police | Our Town Schools | Our Town Sports | Our Town Town Talk | Our Town User Photos | Our Town User Stories | Our Towns | Our Towns Print | Our Towns Web | OurTownsNW | OurTownsSE | Outdoors | Owens | Paddy O'Gara | Peach | Peach Weekender | Personal Finance | pf3admin | pf3nie | Photographers | Pistons | Plugin | Podcasts | Police & Fire | Political Conventions | Politics | Print Furniture | Pro | PubLet | Reach Hire | Real Estate | Real Estate Transfers | Red Wings | Regional Business Profile | Religion | Restaurant Inspections | Restaurant Reviews | Retail | Roberta Gedert | Rose Russell | Ryan Autullo | Ryan Dunn | S. Amjad Hussain | Sarah Elms | School Administration | School Delays & Closings | Scoreboard | Scoreboard Banner | Shannon E. Kolkedy | Share Your Story | Share Your Voice | South | Special Reports | Special: Tiger Force | Sponsored (Nativo) | Sponsored Content | Sponsored Content Local | Sponsored Content-Automotive | Sponsored Content-Business | Sponsored Content-Education | Sponsored Content-Medical | Sponsored-Content-Entertainment | Sports | Sports Agate | Sports Desk | Sports Desk Hold | Spotlight Athlete | St. Francis de Sales Basketball Boys | State | Steve Junga | Stock Market | Stories based on tag | Straight Talk for Teens | Submit a Story | Submit a Student/Teacher/Coach of the Week | Submit an Event | Submit Photos | Suburbs | Sue Brickey | Suzette Hackney | Tab | Tahree Lane | Taylor Dungjen | Technology | test | Test Section | Thin Slices | Tigers | TK Barger | Tom Fisher | Tom Henry | Tom Troy | Tom Walton | Transportation | TriState | TV Listings | TV-Radio | Tyrel Linkhorn | UT | Vanessa McCray | Voter Info1 | Walleye | Weather | Weekender | WeekenderHold | Weekly Ads | Weekly Gallery 2015 | Weekly Gallery 2016 | Weekly Gallery 2017 | West | Will Tomer | World | Writers | Wynne Everett
+
+       at ../pages/cms/cms-base.page.ts:286
+
+      284 |       options.find((o) => norm(o.text).includes(target) || target.includes(norm(o.text)));
+      285 |     if (!match) {
+    > 286 |       throw new Error(`Option "${label}" not found. Available: ${options.map((o) => norm(o.text)).join(' | ')}`);
+          |             ^
+      287 |     }
+      288 |     await select.selectOption({ value: match.value });
+      289 |   }
+        at CongeroPage.selectOptionLoose (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/cms-base.page.ts:286:13)
+        at CongeroPage.fillNewCongeroType (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/congero.page.ts:91:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/congero-administration.spec.ts:28:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Option "tags" not found. Available: None | 50+ | A&E | Additional Resources | Adtest | Agriculture | Alexander Cohen | Alexandra Mester | Allison Dunn | Amateur | Amy Stone | Amy Voigt | Andy Morrison | Animals | Ann Weber | Art | Arts | ArtsHold | Automotive | B Partners | B Partners - Ability Center | B Partners - Anthem Blue Cross | B Partners - Arbor Avenue Wealth Mgmt | B Partners - Arrowhead Behavioral | B Partners - Balance & Mobility | B Partners - BGSU | B Partners - Black Diamond | B Partners - Blue Ribbon Hemp | B Partners - Bolt Express | B Partners - Boyk Law Offices | B Partners - CASA | B Partners - Epworth Church | B Partners - Exciting Windows by Couture | B Partners - Explore 419 | B Partners - Fair Housing Center | B Partners - Finixio | B Partners - Fulton Cty Health Center | B Partners - Glass City Academy | B Partners - GTCF | B Partners - Hammill Medical | B Partners - Holiday Gift Guide | B Partners - Holt Roofing Company | B Partners - Homes | B Partners - HOPE Toledo | B Partners - Hylant | B Partners - Imagination Station | B Partners - JustCBD | B Partners - Kapios | B Partners - Keystone Capacity Solutions | B Partners - Kids of Character | B Partners - La-Z-Boy | B Partners - Leadership Toledo | B Partners - Levis Commons | B Partners - Lott Industries | B Partners - Lourdes University | B Partners - Lucas County Recorder | B Partners - Luther Home of Mercy | B Partners - McLaren St. Luke's | B Partners - Med1Care | B Partners - Mighty Earth | B Partners - Ministry of Hemp | B Partners - Miracle-Ear | B Partners - Mission Lean | B Partners - MVCDS | B Partners - Ohioans Home Healthcare | B Partners - OSU Engineering | B Partners - Oswald Companies | B Partners - Phoenix Investors | B Partners - Precision Heart Rhythm | B Partners - ProMedica | B Partners - ProMedica Medical Mgmt | B Partners - Readers' Choice Awards | B Partners - Restaurants | B Partners - Ronald McDonald House | B Partners - Savage & Associates | B Partners - Shumaker | B Partners - Solheim Cup | B Partners - Spengler Nathanson | B Partners - Tarta | B Partners - Ternion | B Partners - Toledo Clinic | B Partners - Toledo Museum of Art | B Partners - Toledo Public Library | B Partners - Toledo Zoo & Aquarium | B Partners - United Way | B Partners - University of Toledo | B Partners - USA Insulation | B Partners - UT Physicians | B Partners - UTMC | B Partners - Western Toledo Academy | B Partners - Widget - Frontpage | B Partners - Widget - Story Page | B Partners - Yark Automotive Group | B Partners - Zenobia Shriners | Barbara Hendel | Ben Konop | BGSU | Big Story | Big Story (TEST) | Bin Laden | Birding Week 2018 | Biz Desk | Biz Desk Hold | Blade Editorial Board | Blade Vendor Page | Blogs | Books | BooksPrint | Breaking News | Brian Buckey | Brian Dugger | British-Royalty | Browns | BTN | Burris & Walters | Business | Campus Connection | Cavaliers | Channel 13 Blade Briefings | Chip Towns | City | City Desk | City Desk Hold | Classifieds | Code 18: Unsolved | College | College Highlights | Columnists | Community Events | Connect With Us | Contact Us | Coronavirus | Coupon Queen | Coupon Queen Coupons | Coupon Queen Q&A | Coupon Queen Submissions | Courts | Culture | Culture Shock | Customer Service | Daily Log | Dale Emch | Dan Neman | Dan Simpson | Dana Open | Dave Murray | Dave Zapotosky | David Briggs | David Kushma | David Patch | David Shribman | David Yonke | Death Row Inmates | Deaths | Decoder | Developing News | Development | Dinner Tonight | Dogs for Adoption | Don't send to News Break | Dr. Gary Thompson | E-Snip & Save | East | Economy | Edit | EditF | Editorial Cartoons | Editorials | Education | Elect_Hold | Election Results EntryDelete | Energy | Environment | Events | Explore 419 | Facebook Test | Featured Blogs | Featured Blogs - Coop Scoop | Featured Columns: A&E | Featured Columns: Business | Featured Columns: Frontpage Test | Featured Columns: Home | Featured Columns: Local | Featured Columns: News | Featured Columns: Sports | Featured Editorial: Home | Features Desk | Features Desk Hold | Fishing Report | Food | Forum | ForumPrint | Frogtown | Frontpage Test | Galleries | Gardening | Geoff Burns | Gift Guide | Glass City Gametime | Golf | Guardians | Health & Well-Being | Health & Well-Being | High School | Holiday Cookies | Home | Hunting Report | I Heart My Job Submission | Jack Lessenberry | Jane Schmucker | Javonte Anderson | Jay Skebba | Jeff Schmucker | Jennifer Feehan | Jeremy Schneider | Jeremy Wadsworth | Jetta Fraser | Jim Provance | Jimmy Miller | Jobs | John Wagner | Jon Chavez | Julie Njaim | Keith Burris | Kendall Downs | Kirk Baird | Kris Turner | Kyle Rowland | Labor | Latest Headlines | Lauren Lindstrom | Letter | Letters to the Editor | Lions | Lisa Dutton | Living | LivingHold | Local | Local Agate Edit | Local Agate Entry | Local Agate Entry-copy | Lori King | Lourdes | Mag | Manage Your Content | Marathon Classic | Marilou Johanek | Mark Monroe | Mark Reiter | Mark Zaborney | Mary Alice Powell | Mary Bilyeu | Matt Markey | Matt Thompson | Meals with Maddie | Medical | Michigan | Mike Pearson | Mike Sigov | Monday Memories | Most Wanted | Movies | Mud Hens | Music-Theater-Dance | Must Read | Must Read - Frontpage | My Account | Natalie Trusso Cafarello | Nation | News | NewsSlide | NewsTest | Nicholas Piotrowicz | Nicki Gorny | NIE | Nolan Rosenkrans | North | Obit_Hold | Obituaries | Ohio State | Olympics | Op-Ed Columns | OpEd | Opinion | Our Town Business | Our Town Going Out | Our Town Guest Columns | Our Town Home - Bedford Township | Our Town Home - Holland | Our Town Home - Maumee | Our Town Home - Northwood | Our Town Home - Oregon | Our Town Home - Ottawa Hills | Our Town Home - Perrysburg | Our Town Home - Rossford | Our Town Home - Springfield Township | Our Town Home - Sylvania | Our Town News | Our Town Person of the Week | Our Town Police | Our Town Schools | Our Town Sports | Our Town Town Talk | Our Town User Photos | Our Town User Stories | Our Towns | Our Towns Print | Our Towns Web | OurTownsNW | OurTownsSE | Outdoors | Owens | Paddy O'Gara | Peach | Peach Weekender | Personal Finance | pf3admin | pf3nie | Photographers | Pistons | Plugin | Podcasts | Police & Fire | Political Conventions | Politics | Print Furniture | Pro | PubLet | Reach Hire | Real Estate | Real Estate Transfers | Red Wings | Regional Business Profile | Religion | Restaurant Inspections | Restaurant Reviews | Retail | Roberta Gedert | Rose Russell | Ryan Autullo | Ryan Dunn | S. Amjad Hussain | Sarah Elms | School Administration | School Delays & Closings | Scoreboard | Scoreboard Banner | Shannon E. Kolkedy | Share Your Story | Share Your Voice | South | Special Reports | Special: Tiger Force | Sponsored (Nativo) | Sponsored Content | Sponsored Content Local | Sponsored Content-Automotive | Sponsored Content-Business | Sponsored Content-Education | Sponsored Content-Medical | Sponsored-Content-Entertainment | Sports | Sports Agate | Sports Desk | Sports Desk Hold | Spotlight Athlete | St. Francis de Sales Basketball Boys | State | Steve Junga | Stock Market | Stories based on tag | Straight Talk for Teens | Submit a Story | Submit a Student/Teacher/Coach of the Week | Submit an Event | Submit Photos | Suburbs | Sue Brickey | Suzette Hackney | Tab | Tahree Lane | Taylor Dungjen | Technology | test | Test Section | Thin Slices | Tigers | TK Barger | Tom Fisher | Tom Henry | Tom Troy | Tom Walton | Transportation | TriState | TV Listings | TV-Radio | Tyrel Linkhorn | UT | Vanessa McCray | Voter Info1 | Walleye | Weather | Weekender | WeekenderHold | Weekly Ads | Weekly Gallery 2015 | Weekly Gallery 2016 | Weekly Gallery 2017 | West | Will Tomer | World | Writers | Wynne Everett
+
+       at ../pages/cms/cms-base.page.ts:286
+
+      284 |       options.find((o) => norm(o.text).includes(target) || target.includes(norm(o.text)));
+      285 |     if (!match) {
+    > 286 |       throw new Error(`Option "${label}" not found. Available: ${options.map((o) => norm(o.text)).join(' | ')}`);
+          |             ^
+      287 |     }
+      288 |     await select.selectOption({ value: match.value });
+      289 |   }
+        at CongeroPage.selectOptionLoose (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/cms-base.page.ts:286:13)
+        at CongeroPage.fillNewCongeroType (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/congero.page.ts:91:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/congero-administration.spec.ts:28:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/congero-administration--re-fc54b-ype-with-a-field-definition-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [regression] › tests/regression/print-administration.spec.ts:23:3 › @regression @CMS @PrintAdmin Print Administration › Create a shape and confirm it is available when creating a story 
+
+    Error: Shapes creation "Enabled" label should show
+
+    Shapes creation "Enabled" label should show
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBeNull[2m()[22m
+
+    Received: [31mnull[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/base.page.ts:108
+
+      106 |     await expect(async () => {
+      107 |       expect(await this.firstVisible(locator), message).not.toBeNull();
+    > 108 |     }, message).toPass({ timeout: timeoutMs });
+          |                 ^
+      109 |   }
+      110 |
+      111 |   /**
+        at PrintAdminPage.expectAnyVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:108:17)
+        at PrintAdminPage.shapesCreationDisplayed (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:216:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:30:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Option "6 col Inside Left NEW FONTS" not found. Available: 12 col Broadsheet Doubletruck - CLE | 12 col Broadsheet Doubletruck EMPTY - CLE | 6 col Inside Left - CLE | 6 col Inside Left SPONSORED CONTENT - CLE | 6 col Inside Right - CLE | 6 col Inside Right SPONSORED CONTENT - CLE | 6col Inside EMPTY - CLE | A1 Daily No Skybox No Strip Ad - CLE | A1 Daily No Skybox With Strip Ad - CLE | A1 Daily No Strip Ad - CLE | A1 Daily with FULL PAGE AD - CLE | A1 Daily With No Strip Ad but 2 col Skybox Ad - CLE | A1 Daily With Strip Ad - CLE | A1 Daily With Strip Ad and 2 col Skybox Ad - CLE | A1 EXTRA - CLE | A1 Sunday No Skybox No Strip Ad - CLE | A1 Sunday No Skybox With Strip Ad - CLE | A1 Sunday No Strip Ad - CLE | A1 Sunday With 2 col Skybox Ad - CLE | A1 Sunday with FULL PAGE AD - CLE | A1 Sunday With Strip Ad - CLE | A1 Sunday With Strip Ad and 2 col Skybox Ad - CLE | A1 THANKSGIVING with FULL PAGE AD - CLE | A2 with How To Reach Us - CLE | A2 with How To Reach Us - CLE (Copy) | AD SUPPLEMENT Tab EMPTY - CLE | AD SUPPLEMENT Tab Inside Left - CLE | AD SUPPLEMENT TAB Inside Right - CLE | Arts - CLE | Arts Inside - CLE | Books - CLE | BTN - CLE | BTN Voters Guide - CLE | BUSINESS DAILY BUSINESS with editable ears - CLE | BUSINESS DAILY COLOR HEADER with editable ears - CLE | BUSINESS SUNDAY - CLE | H1 Health & Well-Being_Deep skybox, Strip ad - BLUE - CLE | H1 Health & Well-Being_Deep skybox, Strip ad - GREEN - CLE | IYOG Template - Mast only - CLE | Living - CLE | NEW Peach Plus - CLE | NEW x4 Col ADVERTISING SUPPLEMENT TAB Inside Left - CLE | NEW x4 Col ADVERTISING SUPPLEMENT TAB Inside Right - CLE | NEW x4 Col SPONSORED CONTENT TAB Inside Left - CLE | NEW x4 Col SPONSORED CONTENT TAB Inside Right - CLE | Peach (Editable header) - CLE | Religion - CLE | Second News Inside - CLE | Second News No Border No Ad - CLE | Second News No Border No Ad - CLE (Copy) | Second News No Border with 2 inch ad - CLE | Second News SUNDAY - CLE | SP | Baseball page (even) - CLE | SP | Baseball page (odd) - CLE | SP | MLB STATS | Left/Even Page - CLE | SP | MLB STATS | Right/Odd Page - CLE | SP | NFL page (even) - CLE | SP | NFL page (odd) - CLE | SP 5 col Inside Left - CLE | SP 5 col Inside Right - CLE | SP TIMEOUT - CLE | SPORTS NO AD - CLE | SPORTS PLAYOFF EXTRA - CLE | SPORTS with 2-INCH AD - CLE | SPORTS with 3-INCH AD - CLE | Tab COMICS EMPTY - CLE | Tab COMICS Left - CLE | TAB COMICS Right - CLE | Tab Doubletruck - CLE | Tab Doubletruck EMPTY - CLE | Tab EMPTY - CLE | Tab Inside Left - CLE | Tab Inside Left | 4 column grid - CLE | TAB Inside Right - CLE | TAB Inside Right | 4 column grid - CLE | test_TLB | Toledo Magazine - CLE | Travel & Leisure - CLE | Wider Opinion Page - CLE | WK | AROUND TOWN DOUBLETRUCK - CLE | WK | Art - CLE | WK | CLASSICS - CLE | WK | DINE - CLE | WK | DVD - CLE | WK | GAME ON - CLE | WK | MOVIES - CLE | WK | PEACH PLUS new (USE THIS ONE, PLEASE) - CLE | WK | PLAN IT - CLE | WK | PUZZLES - MON - CLE | WK | PUZZLES - TUE - CLE | WK | PUZZLES - WED - CLE | WK | RELIGION PEACH STYLE - CLE | WK | SCENE - CLE | WK | SOUNDS - CLE | WK | THEATER - CLE | x10 Col SPONSORED CONTENT TAB DoubleTruck - CLE | x4 Col SPONSORED CONTENT TAB Inside Left - CLE | x4 Col SPONSORED CONTENT TAB Inside Right - CLE | x4 Col Tab EMPTY - CLE | x5 Col SPONSORED CONTENT TAB Inside Left - CLE | x5 Col SPONSORED CONTENT TAB Inside Right - CLE | x5 Col Tab EMPTY - CLE | x8 Col SPONSORED CONTENT DoubleTruck - CLE
+
+       at ../pages/cms/cms-base.page.ts:286
+
+      284 |       options.find((o) => norm(o.text).includes(target) || target.includes(norm(o.text)));
+      285 |     if (!match) {
+    > 286 |       throw new Error(`Option "${label}" not found. Available: ${options.map((o) => norm(o.text)).join(' | ')}`);
+          |             ^
+      287 |     }
+      288 |     await select.selectOption({ value: match.value });
+      289 |   }
+        at PrintAdminPage.selectOptionLoose (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/cms-base.page.ts:286:13)
+        at PrintAdminPage.fillNewShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:223:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:31:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-de4e0-lable-when-creating-a-story-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [regression] › tests/regression/print-administration.spec.ts:48:3 › @regression @CMS @PrintAdmin Print Administration › Copy an existing shape 
+
+    Error: record count should reach 1286
+
+    record count should reach 1286
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1286[39m
+    Received: [31m1285[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/print-admin.page.ts:185
+
+      183 |         message: `record count should reach ${op === 'Copy' ? before + 1 : before - 1}`,
+      184 |       })
+    > 185 |       .toBe(op === 'Copy' ? before + 1 : before - 1);
+          |        ^
+      186 |   }
+      187 |
+      188 |   /** Search a list then assert every result row contains the term (Selenium verifySearchResults). */
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:185:8)
+        at PrintAdminPage.copyShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:234:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:50:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: record count should reach 1286
+
+    record count should reach 1286
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1286[39m
+    Received: [31m1285[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/print-admin.page.ts:185
+
+      183 |         message: `record count should reach ${op === 'Copy' ? before + 1 : before - 1}`,
+      184 |       })
+    > 185 |       .toBe(op === 'Copy' ? before + 1 : before - 1);
+          |        ^
+      186 |   }
+      187 |
+      188 |   /** Search a list then assert every result row contains the term (Selenium verifySearchResults). */
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:185:8)
+        at PrintAdminPage.copyShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:234:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:50:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-31020-tion-Copy-an-existing-shape-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape 
+
+    Error: record count should reach 1284
+
+    record count should reach 1284
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1284[39m
+    Received: [31m1285[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/print-admin.page.ts:185
+
+      183 |         message: `record count should reach ${op === 'Copy' ? before + 1 : before - 1}`,
+      184 |       })
+    > 185 |       .toBe(op === 'Copy' ? before + 1 : before - 1);
+          |        ^
+      186 |   }
+      187 |
+      188 |   /** Search a list then assert every result row contains the term (Selenium verifySearchResults). */
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:185:8)
+        at PrintAdminPage.deleteShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:238:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: record count should reach 1284
+
+    record count should reach 1284
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1284[39m
+    Received: [31m1285[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/print-admin.page.ts:185
+
+      183 |         message: `record count should reach ${op === 'Copy' ? before + 1 : before - 1}`,
+      184 |       })
+    > 185 |       .toBe(op === 'Copy' ? before + 1 : before - 1);
+          |        ^
+      186 |   }
+      187 |
+      188 |   /** Search a list then assert every result row contains the term (Selenium verifySearchResults). */
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:185:8)
+        at PrintAdminPage.deleteShape (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:238:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-95f51-ministration-Delete-a-shape-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [regression] › tests/regression/wire-feeds.spec.ts:24:3 › @regression @CMS @WireFeeds Wire Feeds › Use a wire story and find it in Stories by slug 
+
+    Error: No wire stories available to select
+
+       at ../pages/cms/wire-feeds.page.ts:85
+
+      83 |   async selectStory(): Promise<void> {
+      84 |     const n = await this.storyCheckboxes.count();
+    > 85 |     if (n < 1) throw new Error('No wire stories available to select');
+         |                      ^
+      86 |     let idx = Math.floor(Math.random() * n);
+      87 |     if (idx === 0 && n > 1) idx = Math.floor(Math.random() * (n - 1)) + 1;
+      88 |     await this.jsClick(this.storyCheckboxes.nth(idx));
+        at WireFeedsPage.selectStory (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/wire-feeds.page.ts:85:22)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/wire-feeds.spec.ts:32:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No wire stories available to select
+
+       at ../pages/cms/wire-feeds.page.ts:85
+
+      83 |   async selectStory(): Promise<void> {
+      84 |     const n = await this.storyCheckboxes.count();
+    > 85 |     if (n < 1) throw new Error('No wire stories available to select');
+         |                      ^
+      86 |     let idx = Math.floor(Math.random() * n);
+      87 |     if (idx === 0 && n > 1) idx = Math.floor(Math.random() * (n - 1)) + 1;
+      88 |     await this.jsClick(this.storyCheckboxes.nth(idx));
+        at WireFeedsPage.selectStory (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/wire-feeds.page.ts:85:22)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/wire-feeds.spec.ts:32:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/wire-feeds--regression-CMS-5a584--find-it-in-Stories-by-slug-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [regression] › tests/regression/wire-feeds.spec.ts:48:3 › @regression @CMS @WireFeeds Wire Feeds › Use a wire photo and find it in Media Files by title 
+
+    Error: dropdown should be visible to select "Last Month"
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('select[name=\'TransmittedDateRange\']')
+    Expected: visible
+    Timeout: 90000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - dropdown should be visible to select "Last Month" with timeout 90000ms[22m
+    [2m  - waiting for locator('select[name=\'TransmittedDateRange\']')[22m
+
+
+       at ../pages/base.page.ts:97
+
+       95 |   /** Assert an element is visible with a clear message (no silent failures). */
+       96 |   async expectVisible(locator: Locator, message: string, timeoutMs = this.defaultWaitMs): Promise<void> {
+    >  97 |     await expect(locator, message).toBeVisible({ timeout: timeoutMs });
+          |                                    ^
+       98 |   }
+       99 |
+      100 |   /**
+        at WireFeedsPage.expectVisible (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/base.page.ts:97:36)
+        at WireFeedsPage.selectOptionLoose (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/cms-base.page.ts:276:16)
+        at WireFeedsPage.selectTransmittedRange (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/wire-feeds.page.ts:44:16)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/wire-feeds.spec.ts:54:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No wire photos available to select
+
+       at ../pages/cms/wire-feeds.page.ts:94
+
+      92 |   async selectPhoto(): Promise<void> {
+      93 |     const n = await this.photoCheckColumns.count();
+    > 94 |     if (n < 1) throw new Error('No wire photos available to select');
+         |                      ^
+      95 |     const idx = Math.floor(Math.random() * n);
+      96 |     await this.jsClick(this.photoCheckColumns.nth(idx));
+      97 |     // Selenium read titleInput.getAttribute("value"); the panel is a <div>, so value
+        at WireFeedsPage.selectPhoto (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/wire-feeds.page.ts:94:22)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/wire-feeds.spec.ts:56:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/wire-feeds--regression-CMS-d41f6--it-in-Media-Files-by-title-regression-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style 
+
+    Error: record count should reach 1007
+
+    record count should reach 1007
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m1007[39m
+    Received: [31m1008[39m
+
+    Call Log:
+    - Timeout 90000ms exceeded while waiting on the predicate
+
+       at ../pages/cms/print-admin.page.ts:185
+
+      183 |         message: `record count should reach ${op === 'Copy' ? before + 1 : before - 1}`,
+      184 |       })
+    > 185 |       .toBe(op === 'Copy' ? before + 1 : before - 1);
+          |        ^
+      186 |   }
+      187 |
+      188 |   /** Search a list then assert every result row contains the term (Selenium verifySearchResults). */
+        at PrintAdminPage.copyOrDeleteWithCount (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:185:8)
+        at PrintAdminPage.deleteStyle (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/print-admin.page.ts:264:5)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/regression/print-administration.spec.ts:92:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/print-administration--regr-913e6-ministration-Delete-a-style-regression/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    [regression] › tests/regression/congero-administration.spec.ts:24:3 › @regression @CMS @Congero Congero Administration › Create a Congero Type with a field definition 
+    [regression] › tests/regression/print-administration.spec.ts:23:3 › @regression @CMS @PrintAdmin Print Administration › Create a shape and confirm it is available when creating a story 
+    [regression] › tests/regression/print-administration.spec.ts:48:3 › @regression @CMS @PrintAdmin Print Administration › Copy an existing shape 
+    [regression] › tests/regression/print-administration.spec.ts:53:3 › @regression @CMS @PrintAdmin Print Administration › Delete a shape 
+    [regression] › tests/regression/wire-feeds.spec.ts:24:3 › @regression @CMS @WireFeeds Wire Feeds › Use a wire story and find it in Stories by slug 
+    [regression] › tests/regression/wire-feeds.spec.ts:48:3 › @regression @CMS @WireFeeds Wire Feeds › Use a wire photo and find it in Media Files by title 
+  1 flaky
+    [regression] › tests/regression/print-administration.spec.ts:90:3 › @regression @CMS @PrintAdmin Print Administration › Delete a style 
+  2 skipped
+  15 passed (23.3m)

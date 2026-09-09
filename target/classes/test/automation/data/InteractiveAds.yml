@@ -1,0 +1,21 @@
+interactiveAd1:
+  Title: interactiveAd1
+  Slug: testinteractiveAd1
+  Image: ./src/main/resources/test/automation/data/Ad1.jpg
+#  Image: C:\\Libercus\\Interactive ads for PGe\\PG Interactive ad\\Ad1.jpg
+  ZipFile: ./src/main/resources/test/automation/data/0ca492f9-6e34-4a56-b3e0-bdb77cfca798.zip
+#  ZipFile: C:\\Libercus\\Interactive ads for PGe\\PG Interactive ad\\0ca492f9-6e34-4a56-b3e0-bdb77cfca798.Zip
+interactiveAd2:
+  Title: interactiveAd2
+  Slug: testinteractiveAd2
+  Image: ./src/main/resources/test/automation/data/2d97dfb8-3df7-4e39-8ee3-e5b389082175.jpg
+  ZipFile: ./src/main/resources/test/automation/data/2d97dfb8-3df7-4e39-8ee3-e5b389082175.Zip
+#  Image: C:\\Libercus\\Interactive ads for PGe\\Pge Interactivead2\\2d97dfb8-3df7-4e39-8ee3-e5b389082175.jpg
+#  ZipFile: C:\\Libercus\\Interactive ads for PGe\\Pge Interactivead2\\2d97dfb8-3df7-4e39-8ee3-e5b389082175.Zip
+interactiveAd3:
+  Title: interactiveAd3
+  Slug: testinteractiveAd3
+  Image: ./src/main/resources/test/automation/data/71afd0d3-f44b-4af2-b90d-f212e340ba2e.jpg
+  ZipFile: ./src/main/resources/test/automation/data/71afd0d3-f44b-4af2-b90d-f212e340ba2e.Zip
+#  Image: C:\\Libercus\\Interactive ads for PGe\\PG Interactive ad3\\71afd0d3-f44b-4af2-b90d-f212e340ba2e.jpg
+#  ZipFile: C:\\Libercus\\Interactive ads for PGe\\PG Interactive ad3\\71afd0d3-f44b-4af2-b90d-f212e340ba2e.Zip

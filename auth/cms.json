@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "name": "LIBERCUS_SESSIONID",
+      "value": "2a9950f5699f4353b95fe8562b04c807",
+      "domain": "tbmuatedit.libercus.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

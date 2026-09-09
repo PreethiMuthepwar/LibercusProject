@@ -1,0 +1,102 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 3 tests using 1 worker
+
+  ✘  1 [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page (1.2m)
+  ✘  2 [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page (retry #1) (1.2m)
+  ✓  3 [pf3] › tests/pf3/reader.spec.ts:62:3 › @pf3 @reader PF3 reader › Display mode can switch to Single Page (7.7s)
+  ✓  4 [pf3] › tests/pf3/settings.spec.ts:27:3 › @pf3 @settings PF3 settings › Display option can be set to Double Page (23.9s)
+
+
+  1) [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page 
+
+    Error: double-page mode should reach a 2-page spread as you navigate
+
+    double-page mode should reach a 2-page spread as you navigate
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m2[39m
+    Received: [31m1[39m
+
+    Call Log:
+    - Timeout 60000ms exceeded while waiting on the predicate
+
+       at ../pages/pf3/pf3-home.page.ts:583
+
+      581 |           },
+      582 |         )
+    > 583 |         .toBe(2);
+          |          ^
+      584 |     } else {
+      585 |       // Single-page mode always shows exactly one visible edition page.
+      586 |       await this.nextPage.first().click({ force: true }).catch(() => {});
+        at Pf3HomePage.expectDisplayOption (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:583:10)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/reader.spec.ts:59:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: double-page mode should reach a 2-page spread as you navigate
+
+    double-page mode should reach a 2-page spread as you navigate
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m2[39m
+    Received: [31m1[39m
+
+    Call Log:
+    - Timeout 60000ms exceeded while waiting on the predicate
+
+       at ../pages/pf3/pf3-home.page.ts:583
+
+      581 |           },
+      582 |         )
+    > 583 |         .toBe(2);
+          |          ^
+      584 |     } else {
+      585 |       // Single-page mode always shows exactly one visible edition page.
+      586 |       await this.nextPage.first().click({ force: true }).catch(() => {});
+        at Pf3HomePage.expectDisplayOption (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:583:10)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/reader.spec.ts:59:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/reader--pf3-reader-PF3-rea-2c5c7-e-can-switch-to-Double-Page-pf3-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [pf3] › tests/pf3/reader.spec.ts:55:3 › @pf3 @reader PF3 reader › Display mode can switch to Double Page 
+  2 passed (3.5m)

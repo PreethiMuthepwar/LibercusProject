@@ -1,0 +1,106 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 3 tests using 1 worker
+
+  ✘  1 [cms] › tests/cms/content-creation.spec.ts:96:3 › @smoke @CMS @Creation Content creation › Create a Rich Media Ad (1.7m)
+  ✘  2 [cms] › tests/cms/content-creation.spec.ts:96:3 › @smoke @CMS @Creation Content creation › Create a Rich Media Ad (retry #1) (1.8m)
+  ✓  3 [cms] › tests/cms/filter.spec.ts:82:3 › @smoke @CMS @Filter Filter functionality › Filter Rich Media by Device Type (Tablet) (18.2s)
+  ✓  4 [cms] › tests/cms/filter.spec.ts:91:3 › @smoke @CMS @Filter Filter functionality › Filter Rich Media by Ad Type (Lexigo) (42.5s)
+
+
+  1) [cms] › tests/cms/content-creation.spec.ts:96:3 › @smoke @CMS @Creation Content creation › Create a Rich Media Ad 
+
+    Error: Rich Media creation page should show "Rich Media ID"
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: getByText('Rich Media ID', { exact: true })
+    Expected pattern: [32m/Rich Media ID/i[39m
+    Timeout: 90000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Rich Media creation page should show "Rich Media ID" with timeout 90000ms[22m
+    [2m  - waiting for getByText('Rich Media ID', { exact: true })[22m
+
+
+       at ../pages/cms/rich-media-ads.page.ts:226
+
+      224 |   /** Selenium adCreationPage(): the "Rich Media ID" label is shown. */
+      225 |   async expectCreationPage(): Promise<void> {
+    > 226 |     await expect(this.richMediaAdId, 'Rich Media creation page should show "Rich Media ID"').toHaveText(
+          |                                                                                              ^
+      227 |       /Rich Media ID/i,
+      228 |       { timeout: this.defaultWaitMs },
+      229 |     );
+        at RichMediaAdsPage.expectCreationPage (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/rich-media-ads.page.ts:226:94)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/cms/content-creation.spec.ts:100:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Rich Media creation page should show "Rich Media ID"
+
+    [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: getByText('Rich Media ID', { exact: true })
+    Expected pattern: [32m/Rich Media ID/i[39m
+    Timeout: 90000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Rich Media creation page should show "Rich Media ID" with timeout 90000ms[22m
+    [2m  - waiting for getByText('Rich Media ID', { exact: true })[22m
+
+
+       at ../pages/cms/rich-media-ads.page.ts:226
+
+      224 |   /** Selenium adCreationPage(): the "Rich Media ID" label is shown. */
+      225 |   async expectCreationPage(): Promise<void> {
+    > 226 |     await expect(this.richMediaAdId, 'Rich Media creation page should show "Rich Media ID"').toHaveText(
+          |                                                                                              ^
+      227 |       /Rich Media ID/i,
+      228 |       { timeout: this.defaultWaitMs },
+      229 |     );
+        at RichMediaAdsPage.expectCreationPage (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/cms/rich-media-ads.page.ts:226:94)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/cms/content-creation.spec.ts:100:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/content-creation--smoke-CM-53905-tion-Create-a-Rich-Media-Ad-cms-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [cms] › tests/cms/content-creation.spec.ts:96:3 › @smoke @CMS @Creation Content creation › Create a Rich Media Ad 
+  2 passed (4.7m)

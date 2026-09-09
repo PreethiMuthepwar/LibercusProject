@@ -1,0 +1,81 @@
+[global-setup] CMS login…
+[global-setup] CMS ready. Saving storageState → auth/cms.json
+
+Running 2 tests using 1 worker
+
+  ✓  1 [pf3] › tests/pf3/views.spec.ts:44:3 › @pf3 @views PF3 views › Search: Previous Edition with a keyword (5.8s)
+  ✘  2 [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab (43.1s)
+  ✘  3 [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab (retry #1) (42.9s)
+
+
+  1) [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab 
+
+    Error: No ad image on the current edition opened a new tab
+
+       at ../pages/pf3/pf3-home.page.ts:468
+
+      466 |       if (late) return late;
+      467 |     }
+    > 468 |     throw new Error('No ad image on the current edition opened a new tab');
+          |           ^
+      469 |   }
+      470 |
+      471 |   // ── Search view ──
+        at Pf3HomePage.clickAdImageExpectNewTab (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:468:11)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/views.spec.ts:58:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: No ad image on the current edition opened a new tab
+
+       at ../pages/pf3/pf3-home.page.ts:468
+
+      466 |       if (late) return late;
+      467 |     }
+    > 468 |     throw new Error('No ad image on the current edition opened a new tab');
+          |           ^
+      469 |   }
+      470 |
+      471 |   // ── Search view ──
+        at Pf3HomePage.clickAdImageExpectNewTab (/Users/aditiyanagpal/Documents/liburcus/playwright-libercus/pages/pf3/pf3-home.page.ts:468:11)
+        at /Users/aditiyanagpal/Documents/liburcus/playwright-libercus/tests/pf3/views.spec.ts:58:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/views--pf3-views-PF3-views-32a1f-ens-the-ad-URL-in-a-new-tab-pf3-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [pf3] › tests/pf3/views.spec.ts:57:3 › @pf3 @views PF3 views › Ad image opens the ad URL in a new tab 
+  1 passed (1.8m)
